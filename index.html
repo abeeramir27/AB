@@ -64,11 +64,71 @@
         </div>
       </div>
     </div>
-    <div id="roadmap" style="margin-top: 60px; background-color: #a1aaa4">
-      
+    <div id="roadmap">
+      <h1>My RoadMap</h1>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h2>Internship @ Sybrid Private Limited</h2>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h2>Internship @ Colgate</h2>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h2>Beaconhouse International College</h2>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h2>Beaconhouse College Program</h2>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h2>National Level Table Tennis Loser</h2>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h2>National Level Table Tennis Loser</h2>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h2>National Level Table Tennis Loser</h2>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h2>National Level Table Tennis Loser</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; margin-top: 50px">
+      <div
+        class="card"
+        style="
+          margin-left: 5px;
+          width: 300px;
+          height: 300px;
+          border-radius: 20px;
+          border: 2px black solid;
+        "
+      >
+        <h2 style="display: flex; justify-content: center">Web Developement</h2>
+        <h4 style="margin-left: 5px">Skills</h4>
+        <p style="margin-left: 5px">React | Next.js | Nest.js | Angular</p>
+      </div>
     </div>
 
     <script>
+      // below code is for carousel
       let currentIndex = 0;
 
       function showSlide(index) {
@@ -92,6 +152,38 @@
 
       // Initialize carousel with the first image
       showSlide(currentIndex);
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const timelineContents = document.querySelectorAll(".timeline-content");
+
+        function handleScroll() {
+          const windowHeight = window.innerHeight;
+          timelineContents.forEach((content) => {
+            const rect = content.getBoundingClientRect();
+            const distanceFromTop = rect.top;
+
+            // Calculate opacity
+            const opacity = Math.min(
+              1,
+              (windowHeight - distanceFromTop + 100) / (windowHeight / 2)
+            );
+            content.style.opacity = opacity;
+
+            // Calculate horizontal position
+            const translateX = Math.min(
+              0,
+              ((windowHeight - distanceFromTop + 100) / (windowHeight / 2)) *
+                50 -
+                50
+            ); // Adjust values as needed
+            content.style.transform = `translateX(${translateX}%) translateY(20px)`;
+          });
+        }
+
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); // Initial call to set styles based on the current scroll position
+      });
     </script>
   </body>
 </html>
