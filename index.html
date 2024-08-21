@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <style></style>
+  </head>
+  <style>
+    #heading1 {
+      opacity: 0.2;
+      font-size: 90px;
+      animation: colorChange 5s infinite;
+    }
+
+    @keyframes colorChange {
+      0% {
+        color: red;
+      }
+      33% {
+        color: green;
+      }
+      66% {
+        color: yellow;
+      }
+      100% {
+        color: red;
+      }
+    }
+  </style>
+  <body>
+    <iframe src="components/navbar.html"></iframe>
+    <div style="display: flex; justify-content: space-between">
+      <div style="display: flex; justify-content: start">
+        <h1 id="heading1">This is a landing page</h1>
+      </div>
+      <div style="display: flex; justify-content: end">
+        <img src="img/student.jpg" alt="student.jpg" width="500px" />
+      </div>
+    </div>
+  </body>
+</html>
