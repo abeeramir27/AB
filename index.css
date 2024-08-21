@@ -60,11 +60,7 @@ h1 {
   top: 10px;
   height: 100%;
   width: 2px;
-  background: linear-gradient(
-    to bottom,
-    #4caf50,
-    transparent
-  ); /* Curved timeline line */
+  background: linear-gradient(to bottom, #4caf50, #ffffff /* transparent */);
 }
 
 .timeline-item:last-child::before {

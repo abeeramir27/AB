@@ -64,6 +64,7 @@
         </div>
       </div>
     </div>
+    <div></div>
     <div id="roadmap">
       <h1>My RoadMap</h1>
       <div class="timeline">
@@ -110,21 +111,155 @@
       </div>
     </div>
 
-    <div style="display: flex; margin-top: 50px">
-      <div
-        class="card"
-        style="
-          margin-left: 5px;
-          width: 300px;
-          height: 300px;
-          border-radius: 20px;
-          border: 2px black solid;
-        "
-      >
-        <h2 style="display: flex; justify-content: center">Web Developement</h2>
-        <h4 style="margin-left: 5px">Skills</h4>
-        <p style="margin-left: 5px">React | Next.js | Nest.js | Angular</p>
+    <div style="font-size: 80px; border: 10px; padding-bottom: 320px">
+      <h1>MY SKILLSETS</h1>
+    </div>
+
+    <div
+      id="cards"
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 20px;
+      "
+    >
+      <!-- cards start here -->
+      <div style="display: flex; margin: 20px; flex: 1 1 300px">
+        <div
+          class="card"
+          style="
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            border-radius: 20px;
+            border: 2px solid;
+            overflow: hidden;
+            padding: 20px;
+            box-sizing: border-box;
+          "
+        >
+          <!-- Background Image Overlay -->
+          <div
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-image: url('img/webdev.jpg');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              opacity: 0.1;
+              z-index: 0;
+            "
+          ></div>
+
+          <!-- Content -->
+          <div style="position: relative; z-index: 1">
+            <h2 style="display: flex; justify-content: center">
+              Web Development
+            </h2>
+            <h4 style="margin-left: 5px">Skills</h4>
+            <p style="margin-left: 5px">
+              JavaScript | TypeScript | Tailwind CSS | Node | Docker
+            </p>
+            <h4 style="margin-left: 5px">Tools & Libraries</h4>
+            <p style="margin-left: 5px">React | Next.js | Nest.js | Angular</p>
+          </div>
+        </div>
       </div>
+
+      <div style="display: flex; margin: 20px; flex: 1 1 300px">
+        <div
+          class="card"
+          style="
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            border-radius: 20px;
+            border: 2px solid;
+            overflow: hidden;
+            padding: 20px;
+            box-sizing: border-box;
+          "
+        >
+          <!-- Background Image Overlay -->
+          <div
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-image: url('img/machiene_learning.jpg');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              opacity: 0.15;
+              z-index: 0;
+            "
+          ></div>
+          <h2 style="display: flex; justify-content: center">
+            Machine Learning
+          </h2>
+          <h4 style="margin-left: 5px">Skills</h4>
+          <p style="margin-left: 5px">
+            Python | TensorFlow | PyTorch | Scikit-Learn
+          </p>
+          <h4 style="margin-left: 5px">Tools & Libraries</h4>
+          <p style="margin-left: 5px">
+            Jupyter | Notebook | Pandas | NumPy | Matplotlib | Seaborn
+          </p>
+        </div>
+      </div>
+
+      <div style="display: flex; margin: 20px; flex: 1 1 300px">
+        <div
+          class="card"
+          style="
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            border-radius: 20px;
+            border: 2px solid;
+            overflow: hidden;
+            padding: 20px;
+            box-sizing: border-box;
+          "
+        >
+          <!-- Background Image Overlay -->
+          <div
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-image: url('img/blockchain.jpg');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              opacity: 0.15;
+              z-index: 0;
+            "
+          ></div>
+          <h2 style="display: flex; justify-content: center">Block Chain</h2>
+          <h4 style="margin-left: 5px">Skills</h4>
+          <p style="margin-left: 5px">
+            Contracts | Ethereum | Truffle | Hardhat
+          </p>
+          <h4 style="margin-left: 5px">Tools & Libraries</h4>
+          <p style="margin-left: 5px">
+            MetaMask | Ganache | Remix | Infura | IPFS
+          </p>
+        </div>
+      </div>
+      <!-- cards end here -->
     </div>
 
     <script>
@@ -184,6 +319,43 @@
         window.addEventListener("scroll", handleScroll);
         handleScroll(); // Initial call to set styles based on the current scroll position
       });
+    </script>
+    <script>
+      const gradients = [
+        "linear-gradient(to right, #c749b4, #c829b0)", // 1
+        "linear-gradient(to right, #cc58c5, #c829be)", // 2
+        "linear-gradient(to right, #c058cc, #bf31cf)", // 3
+        "linear-gradient(to right, #bd5ed4, #b542d1)", // 4
+        "linear-gradient(to right, #af5ed4, #a33dd2)", // 5
+        "linear-gradient(to right, #a15fcf, #9135d1)", // 6
+        "linear-gradient(to right, #a25cdc, #9740df)", // 7
+        "linear-gradient(to right, #a465e3, ##9950e1)", // 8
+      ];
+
+      let cardindex = 0;
+
+      function changeBackground() {
+        console.log("cardindex", cardindex);
+        const cardtext = document.getElementById("cards");
+        if (cardindex >= 2) {
+          // cardtext.style.color = "#E6E6FA";
+          cardtext.style.color = "#E6E6FA";
+        } else if (cardindex >= 4) {
+          cardtext.style.color = "#eedeec";
+        } else {
+          cardtext.style.color = "#eeeede";
+        }
+
+        const cardbg = document.getElementById("cards");
+        cardbg.style.background = gradients[cardindex];
+        cardindex = (cardindex + 1) % gradients.length;
+      }
+
+      // Initial call to set the first background
+      changeBackground();
+
+      // Set interval to change background every 2 seconds
+      setInterval(changeBackground, 4000);
     </script>
   </body>
 </html>
