@@ -70,7 +70,7 @@ h1 {
 .timeline-content {
   background: white;
   border-radius: 8px;
-  padding: 15px;
+  padding: 20px;
   width: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -90,4 +90,103 @@ h1 {
   opacity: 0.5; /* Start with 50% opacity */
   transform: translateX(-50%) translateY(20px); /* Start from left and move down slightly */
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* 
+ */
+@property --p {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+.pie {
+  --p: 20;
+  --b: 22px;
+  --c: darkred;
+  /* --w: 160px; */
+  --w: 10rem;
+
+  width: var(--w);
+  aspect-ratio: 1;
+  position: relative;
+  display: inline-grid;
+  margin: 5px;
+  place-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.pie:before,
+.pie:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+.pie:before {
+  inset: 0;
+  background: radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b)
+      var(--b) no-repeat,
+    conic-gradient(var(--c) calc(var(--p) * 1%), #0000 0);
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - var(--b)),
+    #000 calc(100% - var(--b))
+  );
+  mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - var(--b)),
+    #000 calc(100% - var(--b))
+  );
+}
+.pie:after {
+  inset: calc(50% - var(--b) / 2);
+  background: var(--c);
+  transform: rotate(calc(var(--p) * 3.6deg))
+    translateY(calc(50% - var(--w) / 2));
+}
+.animate {
+  animation: p 1s 0.5s both;
+}
+.no-round:before {
+  background-size: 0 0, auto;
+}
+.no-round:after {
+  content: none;
+}
+@keyframes p {
+  from {
+    --p: 0;
+  }
+}
+
+.skillset-section {
+  font-size: 80px;
+  padding-bottom: 100px;
+  padding-top: 0px;
+  text-align: center; /* Center the heading */
+}
+
+.skillset-section h1 {
+  background-image: url("/AB/img/broken2.jpg");
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skillset-section {
+    font-size: 60px; /* Smaller font size on medium screens */
+    padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skillset-section {
+    font-size: 40px; /* Smaller font size on small screens */
+    padding-bottom: 50px;
+  }
 }
