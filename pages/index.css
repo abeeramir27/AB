@@ -241,7 +241,7 @@ h1 {
   .card p {
     font-size: 1rem; /* Adjust font size for smaller screens */
   }
-
+}
 @media (max-width: 480px) {
   .skillset-section {
     font-size: 40px; /* Smaller font size on small screens */
@@ -290,7 +290,7 @@ h1 {
   }
 
   .card h4 {
-    font-size: 1.0rem; /* Adjust font size for smaller screens */
+    font-size: 1rem; /* Adjust font size for smaller screens */
   }
 
   .card p {
