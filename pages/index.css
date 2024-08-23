@@ -177,16 +177,123 @@ h1 {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   .skillset-section {
     font-size: 60px; /* Smaller font size on medium screens */
     padding-bottom: 70px;
   }
+  #myskillset {
+    font-size: 120px !important;
+  }
 }
+@media (max-width: 805px) {
+  .skillset-section {
+    font-size: 60px; /* Smaller font size on medium screens */
+    padding-bottom: 70px;
+  }
+  #myskillset {
+    font-size: 100px !important;
+  }
+  #justifyskilllset {
+    display: block !important;
+    text-align: center !important;
+  }
+  #skillsetPara {
+    width: 100% !important ; /* Takes full width */
+    margin-bottom: 20px;
+  }
+  #pieContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows pie charts to wrap to next line if needed */
+    margin-top: 0; /* Removes top margin */
+    padding-right: 0; /* Removes padding on smaller screens */
+    padding-left: 20px;
+  }
+
+  .pie {
+    margin: 10px; /* Adds space between pie charts */
+  }
+  #cards {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    padding-bottom: 20px;
+  }
+
+  .card-container {
+    width: 100%; /* Ensure each card takes full width */
+    margin: 10px 0; /* Adjust margin for smaller screens */
+  }
+
+  .card {
+    max-width: 100%; /* Make sure the card uses the full width of its container */
+    height: auto; /* Allow card height to adjust with content */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .card h2 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .card h4 {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .card p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
 
 @media (max-width: 480px) {
   .skillset-section {
     font-size: 40px; /* Smaller font size on small screens */
     padding-bottom: 50px;
+  }
+  #myskillset {
+    font-size: 80% !important;
+  }
+  #justifyskilllset {
+    display: block !important;
+    text-align: center !important;
+  }
+  #skillsetPara {
+    width: 100% !important ; /* Takes full width */
+    margin-bottom: 20px;
+  }
+  #pieContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows pie charts to wrap to next line if needed */
+    margin-top: 0; /* Removes top margin */
+    padding-right: 0; /* Removes padding on smaller screens */
+  }
+
+  .pie {
+    margin: 9px; /* Adds space between pie charts */
+  }
+  #cards {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    padding-bottom: 15px;
+  }
+
+  .card-container {
+    width: 100%; /* Ensure each card takes full width */
+    margin: 10px 0; /* Adjust margin for smaller screens */
+  }
+
+  .card {
+    max-width: 100%; /* Make sure the card uses the full width of its container */
+    height: auto; /* Allow card height to adjust with content */
+    padding: 12px; /* Adjust padding for smaller screens */
+  }
+
+  .card h2 {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .card h4 {
+    font-size: 1.0rem; /* Adjust font size for smaller screens */
+  }
+
+  .card p {
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
   }
 }
