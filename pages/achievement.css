@@ -1,31 +1,67 @@
 #myproj {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  /* margin-top: 10px; */
+  /* margin-bottom: 30px; */
 }
 #myproj h1 {
   font-size: 100px;
   font-weight: 600;
 }
 
-#projCards {
-  margin: 10px;
-
-  padding: 3%;
-  background-color: dimgray;
-}
-
+/*  */
 #cardSection {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f0f0f0;
 }
-#cards {
-  margin: 10px;
-  border: 2px solid black;
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   width: 30%;
-  height: 300px;
-  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+  margin: 10px;
 }
+
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.card h1,
+.card h2 {
+  margin: 0;
+  padding: 15px;
+  text-align: center;
+}
+
+.card h1 {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.card .card-content {
+  padding: 20px;
+  border-top: 1px solid #f0f0f0;
+  text-align: center;
+}
+
+.card .card-content p {
+  font-size: 1rem;
+  color: #777;
+  line-height: 1.5;
+}
+
+/*  */
 #content h2 {
   margin-top: 5px;
 }
@@ -51,6 +87,51 @@
   #content h2 {
     text-align: center;
   }
+  #projCards div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #projCards h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  #projCards h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  #projCards p {
+    font-size: 1rem;
+    text-align: center;
+    text-wrap: balance;
+    padding: 0 20px;
+  }
+
+  #projCards iframe {
+    width: 400px;
+    height: 300px;
+  }
 }
 @media (max-width: 480px) {
+  #projCards div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #projCards h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  #projCards p {
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  #projCards iframe {
+    width: 100%;
+    height: auto;
+  }
 }

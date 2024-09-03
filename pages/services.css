@@ -4,9 +4,8 @@
   padding-top: 0px;
   text-align: center; /* Center the heading */
 }
-
 .Services-section h1 {
-  background-image: url("/AB/img/broken3.jpg");
+  background-image: url("/img/broken3.jpg");
   background-size: cover;
   background-position: center;
   -webkit-background-clip: text;

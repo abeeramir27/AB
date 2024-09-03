@@ -14,7 +14,13 @@
     <!-- bootrap navbar below -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a href="#"><img src="../img/Logo1.png" alt="" width="25px" /></a>
+        <a href="#"
+          ><img
+            src="../img/Logo1.png"
+            alt=""
+            width="25px"
+            style="margin-left: 50px"
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -33,10 +39,7 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item mx-3">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="/AB/pages/index.html"
+              <a class="nav-link active" aria-current="page" href="index.html"
                 >Home</a
               >
             </li>
@@ -52,9 +55,38 @@
             <li class="nav-item mx-3">
               <a class="nav-link" href="contact.html">Contact Me</a>
             </li>
-            <li class="nav-item mx-3 justify-content-end">
-              <button class="nav-link" id="darkmode">Night</button>
-            </li>
+            <!-- <li class="nav-item mx-3 justify-content-end">
+              <div style="margin-top: 9px">
+                <input type="checkbox" class="checkbox" id="checkbox" />
+                <label for="checkbox" class="checkbox-label">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-moon-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-sun-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"
+                    />
+                  </svg>
+                  <span class="ball"></span>
+                </label>
+              </div>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -63,87 +95,231 @@
     <div id="myproj">
       <h1>My Projects</h1>
     </div>
-    <div id="projCards">
-      <div style="display: flex; justify-content: space-around">
-        <div>
-          <h1>Project 1</h1>
-          <h1>Graphic Designing</h1>
-        </div>
-        <div>
-          <p>Explain your project</p>
-        </div>
+
+    <div
+      style="
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(to right, #ffffff, #f85606);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        margin: 10px;
+      "
+    >
+      <div style="width: 55%; padding: 40px">
+        <h1 style="margin-bottom: 10px; font-size: 2rem; color: #333">
+          AI-Powered E-Commerce Platform
+        </h1>
+        <h3 style="margin-bottom: 20px; font-size: 1.5rem; color: #555">
+          Daraz.pk
+        </h3>
+        <p style="font-size: 1.1rem; line-height: 1.6; color: #444">
+          Developed a scalable e-commerce platform with AI-driven product
+          recommendations and personalized user experiences.
+        </p>
+      </div>
+      <div style="flex-shrink: 0">
+        <iframe
+          width="360"
+          height="215"
+          src="https://www.youtube.com/embed/79BQ2ZreJhc"
+          style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
-    <div id="projCards">
-      <div style="display: flex; justify-content: space-around">
-        <div>
-          <h1>Project 1</h1>
-          <h1>Graphic Designing</h1>
-        </div>
-        <div>
-          <p>Explain your project</p>
-        </div>
+    <div
+      style="
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(to right, #ffffff, #2e76d8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        margin: 10px;
+        margin-bottom: 0px;
+      "
+    >
+      <div style="width: 55%; padding: 40px">
+        <h1 style="margin-bottom: 10px; font-size: 2rem; color: #333">
+          Smart Home Automation System
+        </h1>
+        <h3 style="margin-bottom: 20px; font-size: 1.5rem; color: #555">
+          homeautomation.pk
+        </h3>
+        <p style="font-size: 1.1rem; line-height: 1.6; color: #444">
+          Designed and implemented a smart home system that integrates IoT
+          devices with machine learning algorithms for predictive automation.
+        </p>
+      </div>
+      <div style="flex-shrink: 0">
+        <iframe
+          width="360"
+          height="215"
+          src="https://www.youtube.com/embed/79BQ2ZreJhc"
+          style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
-    <div id="projCards">
-      <div style="display: flex; justify-content: space-around">
-        <div>
-          <h1>Project 1</h1>
-          <h1>Graphic Designing</h1>
+
+    <div id="showhidden" style="display: none">
+      <!-- place anything inside this div and it will be displayed or !displayed as per the button -->
+      <div style="display: block">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, #ffffff, #8bd82e);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin: 10px;
+          "
+        >
+          <div style="width: 55%; padding: 40px">
+            <h1 style="margin-bottom: 10px; font-size: 2rem; color: #333">
+              Responsive Healthcare Portal
+            </h1>
+            <h3 style="margin-bottom: 20px; font-size: 1.5rem; color: #555">
+              responsivehealth.co.uk
+            </h3>
+            <p style="font-size: 1.1rem; line-height: 1.6; color: #444">
+              Built a responsive healthcare portal that provides patients with
+              AI-driven diagnostic tools and seamless appointment scheduling
+            </p>
+          </div>
+          <div style="flex-shrink: 0">
+            <iframe
+              width="360"
+              height="215"
+              src="https://www.youtube.com/embed/24MwMdoSrYc"
+              style="
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              "
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
-        <div>
-          <p>Explain your project</p>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, #ffffff, #f85606);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin: 10px;
+          "
+        >
+          <div style="width: 55%; padding: 40px">
+            <h1 style="margin-bottom: 10px; font-size: 2rem; color: #333">
+              XXXxxxxxxx
+            </h1>
+            <h3 style="margin-bottom: 20px; font-size: 1.5rem; color: #555">
+              xxxxxx
+            </h3>
+            <p style="font-size: 1.1rem; line-height: 1.6; color: #444">
+              xxxxxx.
+            </p>
+          </div>
+          <div style="flex-shrink: 0">
+            <iframe
+              width="360"
+              height="215"
+              src="https://www.youtube.com/embed/79BQ2ZreJhc"
+              style="
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              "
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
 
+    <div style="display: flex; justify-content: center; margin-top: 10px">
+      <button
+        id="showhiddenButton"
+        style="border-radius: 10px; padding: 10px; width: auto"
+      >
+        See More
+      </button>
+    </div>
     <div id="myproj" style="margin-top: 100px">
       <h1>Awards</h1>
     </div>
 
     <div id="cardSection">
-      <div id="cards">
-        <div id="content" style="display: flex; justify-content: space-around">
-          <h1>Award</h1>
-          <h2>Name</h2>
-        </div>
-        <div style="margin-top: 50px">
-          <h1>Institude</h1>
-          <h2>name</h2>
-        </div>
-      </div>
-      <div id="cards">
-        <div id="content" style="display: flex; justify-content: space-around">
-          <h1>Award</h1>
-          <h2>Name</h2>
-        </div>
-        <div style="margin-top: 50px">
-          <h1>Institude</h1>
-          <h2>name</h2>
+      <div class="card">
+        <h1>Best English A2 Level</h1>
+        <div class="card-content">
+          <h2>Institute</h2>
+          <p>
+            Developed a scalable e-commerce platform with AI-driven product
+            recommendations and personalized user experiences.
+          </p>
         </div>
       </div>
-      <div id="cards">
-        <div id="content" style="display: flex; justify-content: space-around">
-          <h1>Award</h1>
-          <h2>Name</h2>
-        </div>
-        <div style="margin-top: 50px">
-          <h1>Institude</h1>
-          <h2>name</h2>
+
+      <div class="card">
+        <h1>Award</h1>
+        <div class="card-content">
+          <h2>Institute</h2>
+          <p>
+            Developed a scalable e-commerce platform with AI-driven product
+            recommendations and personalized user experiences.
+          </p>
         </div>
       </div>
-      <div id="cards">
-        <div id="content" style="display: flex; justify-content: space-around">
-          <h1>Award</h1>
-          <h2>Name</h2>
-        </div>
-        <div style="margin-top: 50px">
-          <h1>Institude</h1>
-          <h2>name</h2>
+
+      <div class="card">
+        <h1>Award</h1>
+        <div class="card-content">
+          <h2>Institute</h2>
+          <p>
+            Developed a scalable e-commerce platform with AI-driven product
+            recommendations and personalized user experiences.
+          </p>
         </div>
       </div>
     </div>
+
     <!-- bootrap navbar up -->
+    <script>
+      let button = false;
+      const butontext = document
+        .getElementById("showhiddenButton")
+        .addEventListener("click", () => {
+          button = !button;
+          button
+            ? ((document.getElementById("showhiddenButton").innerText =
+                "See less"),
+              (document.getElementById("showhidden").style.display = "flex"))
+            : ((document.getElementById("showhiddenButton").innerText =
+                "See More"),
+              (document.getElementById("showhidden").style.display = "none"));
+        });
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
