@@ -17,7 +17,7 @@ img {
 
 #roadmap {
   /* margin-top: 60px; */
-  background: linear-gradient(to right, #bed8e3, #aeefa4);
+  background: linear-gradient(to right, #fbfcd4, #a8f9f5);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -31,7 +31,7 @@ img {
     color: #1684cb;
   }
   70% {
-    color: red;
+    color: pink;
   }
 }
 
@@ -165,7 +165,7 @@ h1 {
   padding-bottom: 100px;
   padding-top: 0px;
   text-align: center; /* Center the heading */
-  background-color: #dbb5b5;
+  /* background-color: #dbb5b5; */
 }
 
 .skillset-section h1 {
@@ -216,33 +216,7 @@ h1 {
   .pie {
     margin: 10px; /* Adds space between pie charts */
   }
-  #cards {
-    flex-direction: column; /* Stack cards vertically on smaller screens */
-    padding-bottom: 20px;
-  }
 
-  .card-container {
-    width: 100%; /* Ensure each card takes full width */
-    margin: 10px 0; /* Adjust margin for smaller screens */
-  }
-
-  .card {
-    max-width: 100%; /* Make sure the card uses the full width of its container */
-    height: auto; /* Allow card height to adjust with content */
-    padding: 15px; /* Adjust padding for smaller screens */
-  }
-
-  .card h2 {
-    font-size: 1.5rem; /* Adjust font size for smaller screens */
-  }
-
-  .card h4 {
-    font-size: 1.2rem; /* Adjust font size for smaller screens */
-  }
-
-  .card p {
-    font-size: 1rem; /* Adjust font size for smaller screens */
-  }
 }
 @media (max-width: 480px) {
   .skillset-section {
