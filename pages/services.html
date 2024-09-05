@@ -110,6 +110,24 @@
         My Services
       </h1>
     </div>
+    <button
+      id="backToTop"
+      style="
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+        font-size: 12px;
+        cursor: pointer;
+        display: none; /* Hidden by default */
+      "
+    >
+      Back to Top
+    </button>
     <!----------- cards starts------------>
     <div
       id="cards"
@@ -135,6 +153,7 @@
             padding: 20px;
             box-sizing: border-box;
           "
+          onclick="document.getElementById('apple-description').scrollIntoView({ behavior: 'smooth' });"
         >
           <!-- Background Image Overlay -->
           <div
@@ -187,6 +206,7 @@
             padding: 20px;
             box-sizing: border-box;
           "
+          onclick="document.getElementById('microsoft-description').scrollIntoView({ behavior: 'smooth' });"
         >
           <!-- Background Image Overlay -->
           <div
@@ -232,6 +252,7 @@
             padding: 20px;
             box-sizing: border-box;
           "
+          onclick="document.getElementById('amazon-description').scrollIntoView({ behavior: 'smooth' });"
         >
           <!-- Background Image Overlay -->
           <div
@@ -260,9 +281,156 @@
           </div>
           <h4 style="margin-left: 5px; padding-top: 42px">Services</h4>
           <p style="margin-left: 5px">
-            <li>Shipping Map Improvement</li>
-            <li>Delivery Updates</li>
-            <li>R&D</li>
+            <li>Cloud Architecture Optimization</li>
+            <li>AWS Infrastructure Management</li>
+            <li>E-commerce Platform Enhancement</li>
+          </p>
+        </div>
+      </div>
+      <div style="display: flex; margin: 20px; flex: 1 1 300px">
+        <div
+          class="card"
+          style="
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            border-radius: 20px;
+            border: 2px solid;
+            overflow: hidden;
+            padding: 20px;
+            box-sizing: border-box;
+          "
+          onclick="document.getElementById('meta-description').scrollIntoView({ behavior: 'smooth' });"
+        >
+          <!-- Background Image Overlay -->
+          <div
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-image: url('img/blockchain.jpg');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              opacity: 0.15;
+              z-index: 0;
+              background-color: darkslategray;
+            "
+          ></div>
+          <div style="display: flex; justify-content: space-between">
+            <h2 style="display: flex; justify-content: center">Meta</h2>
+            <img
+              src="../img/meta.png"
+              width="180px"
+              style="padding-right: 40px"
+            />
+          </div>
+          <h4 style="margin-left: 5px; padding-top: 42px">Services</h4>
+          <p style="margin-left: 5px">
+            <li>Enhancing User Privacy Settings</li>
+            <li>AI Algorithms for Content Curation</li>
+            <li>Ad Delivery Improvement</li>
+          </p>
+        </div>
+      </div>
+      <div style="display: flex; margin: 20px; flex: 1 1 300px">
+        <div
+          class="card"
+          style="
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            border-radius: 20px;
+            border: 2px solid;
+            overflow: hidden;
+            padding: 20px;
+            box-sizing: border-box;
+          "
+          onclick="document.getElementById('tesla-description').scrollIntoView({ behavior: 'smooth' });"
+        >
+          <!-- Background Image Overlay -->
+          <div
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-image: url('img/blockchain.jpg');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              opacity: 0.15;
+              z-index: 0;
+              background-color: darkslategray;
+            "
+          ></div>
+          <div style="display: flex; justify-content: space-between">
+            <h2 style="display: flex; justify-content: center">Tesla</h2>
+            <img
+              src="../img/tesla.png"
+              width="140px"
+              style="padding-right: 40px"
+            />
+          </div>
+          <h4 style="margin-left: 5px; padding-top: 42px">Services</h4>
+          <p style="margin-left: 5px">
+            <li>Autonomous Driving Software Optimization</li>
+            <li>Electric Vehicle System Diagnostics</li>
+            <li>Energy Storage Solutions</li>
+          </p>
+        </div>
+      </div>
+      <div style="display: flex; margin: 20px; flex: 1 1 300px">
+        <div
+          class="card"
+          style="
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            border-radius: 20px;
+            border: 2px solid;
+            overflow: hidden;
+            padding: 20px;
+            box-sizing: border-box;
+          "
+          onclick="document.getElementById('costco-description').scrollIntoView({ behavior: 'smooth' });"
+        >
+          <!-- Background Image Overlay -->
+          <div
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-image: url('img/blockchain.jpg');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              opacity: 0.15;
+              z-index: 0;
+              background-color: darkslategray;
+            "
+          ></div>
+          <div style="display: flex; justify-content: space-between">
+            <h2 style="display: flex; justify-content: center">Costco</h2>
+            <img
+              src="../img/costco.png"
+              width="140px"
+              style="padding-right: 40px"
+            />
+          </div>
+          <h4 style="margin-left: 5px; padding-top: 42px">Services</h4>
+          <p style="margin-left: 5px">
+            <li>Supply Chain Automation</li>
+            <li>Warehouse Management Systems</li>
+            <li>Customer Loyalty Program Enhancements</li>
           </p>
         </div>
       </div>
@@ -270,6 +438,129 @@
     </div>
 
     <!-- cards ends  -->
+
+    <div
+      id="descriptions"
+      style="padding: 40px; max-width: 800px; margin: 0 auto; text-align: left"
+    >
+      <h2
+        style="
+          text-align: center;
+          font-size: 2.5rem;
+          color: #2c3e50;
+          font-weight: bold;
+          margin-bottom: 30px;
+        "
+      >
+        About Our Collaborations
+      </h2>
+
+      <div class="company-description" id="apple-description">
+        <h3>
+          <img
+            src="../img/apple.png"
+            alt="Apple Icon"
+            width="30px"
+            style="vertical-align: middle"
+          />
+          Apple Inc:
+        </h3>
+        <p>
+          As a trusted partner of Apple, we provide top-tier services in
+          application development, Siri management, and macOS bug fixing. Our
+          expertise ensures smooth integration and performance enhancements
+          across Apple's software ecosystem.
+        </p>
+      </div>
+
+      <div class="company-description" id="microsoft-description">
+        <h3>
+          <img
+            src="../img/microsoft.png"
+            alt="Microsoft Icon"
+            width="30px"
+            style="vertical-align: middle"
+          />
+          Microsoft:
+        </h3>
+        <p>
+          Our collaboration with Microsoft spans various domains including AI
+          improvement for Copilot, SEO optimization, and research and
+          development. We strive to deliver cutting-edge solutions that help
+          Microsoft stay ahead in innovation.
+        </p>
+      </div>
+
+      <div class="company-description" id="amazon-description">
+        <h3>
+          <img
+            src="../img/amazon.png"
+            alt="Amazon Icon"
+            width="30px"
+            style="vertical-align: middle"
+          />
+          Amazon:
+        </h3>
+        <p>
+          Working with Amazon, we assist in cloud architecture optimization, AWS
+          infrastructure management, and e-commerce platform enhancement,
+          helping Amazon provide better user experiences and scalable cloud
+          solutions.
+        </p>
+      </div>
+
+      <div class="company-description" id="meta-description">
+        <h3>
+          <img
+            src="../img/meta.png"
+            alt="Meta Icon"
+            width="30px"
+            style="vertical-align: middle"
+          />
+          Meta:
+        </h3>
+        <p>
+          Our partnership with Meta focuses on enhancing user privacy settings,
+          developing AI algorithms for content curation, and improving ad
+          delivery mechanisms on Facebook and Instagram platforms.
+        </p>
+      </div>
+
+      <div class="company-description" id="tesla-description">
+        <h3>
+          <img
+            src="../img/tesla.png"
+            alt="Tesla Icon"
+            width="30px"
+            style="vertical-align: middle"
+          />
+          Tesla:
+        </h3>
+        <p>
+          Collaborating with Tesla, we contribute to autonomous driving software
+          optimization, electric vehicle system diagnostics, and energy storage
+          solutions, aiding in Tesla's mission to accelerate the world's
+          transition to sustainable energy.
+        </p>
+      </div>
+
+      <div class="company-description" id="costco-description">
+        <h3>
+          <img
+            src="../img/costco.png"
+            alt="Costco Icon"
+            width="30px"
+            style="vertical-align: middle"
+          />
+          Costco:
+        </h3>
+        <p>
+          With Costco, we provide services in supply chain automation, warehouse
+          management systems, and customer loyalty program enhancements, helping
+          Costco maintain operational efficiency and customer satisfaction.
+        </p>
+      </div>
+    </div>
 
     <!-- footer starts here -->
     <footer class="footer text-center">
@@ -303,6 +594,30 @@
         <p class="mt-3">&copy; 2024 Your Company Name</p>
       </div>
     </footer>
+    <script>
+      // Get the button
+      const backToTopButton = document.getElementById("backToTop");
+
+      // Show or hide the button based on scroll position
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          backToTopButton.style.display = "block";
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      };
+
+      // Scroll to top when button is clicked
+      backToTopButton.onclick = function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      };
+    </script>
     <!-- footer ENDS  here -->
     <!-- bootrap JavaScript -->
     <script

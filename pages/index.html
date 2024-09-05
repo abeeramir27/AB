@@ -137,7 +137,24 @@
         </div>
       </div>
     </nav>
-
+    <button
+      id="backToTop"
+      style="
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+        font-size: 12px;
+        cursor: pointer;
+        display: none; /* Hidden by default */
+      "
+    >
+      Back to Top
+    </button>
     <!-- bootstrap starts here -->
     <div
       style="
@@ -573,6 +590,30 @@
       }
       typeName();
       setInterval(typeName, 5500);
+    </script>
+    <script>
+      // Get the button
+      const backToTopButton = document.getElementById("backToTop");
+
+      // Show or hide the button based on scroll position
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          backToTopButton.style.display = "block";
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      };
+
+      // Scroll to top when button is clicked
+      backToTopButton.onclick = function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      };
     </script>
   </body>
 </html>

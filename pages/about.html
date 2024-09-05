@@ -98,7 +98,24 @@
     </nav>
 
     <!-- bootrap navbar ends -->
-
+    <button
+    id="backToTop"
+    style="
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      font-size: 12px;
+      cursor: pointer;
+      display: none; /* Hidden by default */
+    "
+  >
+    Back to Top
+  </button>
     <div id="aboutme-section" class="aboutme-section" style="font-size: 80px">
       <div style="margin-top: 10px">
         <h1 id="myskillset">About Me</h1>
@@ -174,6 +191,30 @@
       </div>
     </footer>
     <!-- footer up -->
+    <script>
+      // Get the button
+      const backToTopButton = document.getElementById("backToTop");
+
+      // Show or hide the button based on scroll position
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          backToTopButton.style.display = "block";
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      };
+
+      // Scroll to top when button is clicked
+      backToTopButton.onclick = function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      };
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
