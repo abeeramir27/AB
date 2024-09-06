@@ -19,7 +19,7 @@
   </head>
 
   <body>
-    <!-- bootrap -->
+    <!-- Below is the code for navbar which is inspired from bootrap -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a href="#"
@@ -75,11 +75,15 @@
         </div>
       </div>
     </nav>
+    <!-- below div displays the page title right below the Navbar -->
+
     <div id="Services-section" class="Services-section" style="font-size: 80px">
       <h1 id="myservices" style="font-size: 220px; overflow-wrap: break-word">
         MY SERVICES
       </h1>
     </div>
+
+    <!-- Below div willl generate cards that will highligh my skill set in differnet IT domains -->
     <div
       id="cards"
       style="
@@ -107,7 +111,6 @@
             box-sizing: border-box;
           "
         >
-          <!-- Background Image Overlay -->
           <div
             style="
               position: absolute;
@@ -124,7 +127,6 @@
             "
           ></div>
 
-          <!-- Content -->
           <div style="position: relative; z-index: 1">
             <h2 style="display: flex; justify-content: center">
               Web Development
@@ -138,7 +140,7 @@
           </div>
         </div>
       </div>
-
+      <!-- card 2 -->
       <div style="display: flex; margin: 20px; flex: 1 1 300px">
         <div
           class="card"
@@ -154,7 +156,6 @@
             box-sizing: border-box;
           "
         >
-          <!-- Background Image Overlay -->
           <div
             style="
               position: absolute;
@@ -183,7 +184,7 @@
           </p>
         </div>
       </div>
-
+      <!-- card 3 -->
       <div style="display: flex; margin: 20px; flex: 1 1 300px">
         <div
           class="card"
@@ -199,7 +200,6 @@
             box-sizing: border-box;
           "
         >
-          <!-- Background Image Overlay -->
           <div
             style="
               position: absolute;
@@ -226,8 +226,9 @@
           </p>
         </div>
       </div>
-      <!-- cards end here -->
     </div>
+
+    <!-- Below div contains another title  -->
     <div id="Services-section" class="Services-section" style="font-size: 80px">
       <h1
         id="myskillset"
@@ -241,6 +242,8 @@
         My Clientele
       </h1>
     </div>
+
+    <!-- This button will take the user to the top of the screen once user click on it -->
     <button
       id="backToTop"
       style="
@@ -259,7 +262,7 @@
     >
       Back to Top
     </button>
-    <!----------- cards starts------------>
+    <!----------- cards section starts ------------>
     <div
       id="cards"
       style="
@@ -269,7 +272,7 @@
         padding-bottom: 20px;
       "
     >
-      <!-- Card 1 -->
+      <!-- card 1 -->
       <div style="display: flex; margin: 20px; flex: 1 1 300px">
         <div
           class="card"
@@ -286,7 +289,6 @@
           "
           onclick="document.getElementById('apple-description').scrollIntoView({ behavior: 'smooth' });"
         >
-          <!-- Background Image Overlay -->
           <div
             style="
               position: absolute;
@@ -339,7 +341,6 @@
           "
           onclick="document.getElementById('microsoft-description').scrollIntoView({ behavior: 'smooth' });"
         >
-          <!-- Background Image Overlay -->
           <div
             style="
               position: absolute;
@@ -385,7 +386,6 @@
           "
           onclick="document.getElementById('amazon-description').scrollIntoView({ behavior: 'smooth' });"
         >
-          <!-- Background Image Overlay -->
           <div
             style="
               position: absolute;
@@ -434,7 +434,6 @@
           "
           onclick="document.getElementById('meta-description').scrollIntoView({ behavior: 'smooth' });"
         >
-          <!-- Background Image Overlay -->
           <div
             style="
               position: absolute;
@@ -483,7 +482,6 @@
           "
           onclick="document.getElementById('tesla-description').scrollIntoView({ behavior: 'smooth' });"
         >
-          <!-- Background Image Overlay -->
           <div
             style="
               position: absolute;
@@ -532,7 +530,6 @@
           "
           onclick="document.getElementById('costco-description').scrollIntoView({ behavior: 'smooth' });"
         >
-          <!-- Background Image Overlay -->
           <div
             style="
               position: absolute;
@@ -565,11 +562,10 @@
           </p>
         </div>
       </div>
-      <!-- card 3  ends here-->
     </div>
-
     <!-- cards ends  -->
 
+    <!-- below section will display horizontal cards that contains the description of the companies i work with in detail -->
     <div
       id="descriptions"
       style="padding: 40px; max-width: 800px; margin: 0 auto; text-align: left"
@@ -726,10 +722,11 @@
       </div>
     </footer>
     <script>
-      // Get the button
+      // Below Javascript is responsible for handling the backend functionality of the back to
+      // top button that will take the user back to the top screen. Also when it reached a certain point (<=20), it will hide the button from then user
       const backToTopButton = document.getElementById("backToTop");
 
-      // Show or hide the button based on scroll position
+      // This will show or hide the button based on scroll position
       window.onscroll = function () {
         if (
           document.body.scrollTop > 20 ||
@@ -740,8 +737,7 @@
           backToTopButton.style.display = "none";
         }
       };
-
-      // Scroll to top when button is clicked
+      // This will scroll to top when button is clicked
       backToTopButton.onclick = function () {
         window.scrollTo({
           top: 0,
@@ -749,9 +745,9 @@
         });
       };
     </script>
-    <!-- footer ENDS  here -->
 
     <script>
+      // below JS code will change the background color of the cards below "MY SERVICES" title
       const gradients = [
         "linear-gradient(to right, #939898, #c4add6)", // 1
         "linear-gradient(to right, #7d8181, #b9a5c9)", // 2
@@ -769,7 +765,6 @@
         console.log("cardindex", cardindex);
         const cardtext = document.getElementById("cards");
         if (cardindex >= 2) {
-          // cardtext.style.color = "#E6E6FA";
           cardtext.style.color = "#E6E6FA";
         } else if (cardindex >= 4) {
           cardtext.style.color = "#eedeec";
@@ -781,19 +776,18 @@
         cardindex = (cardindex + 1) % gradients.length;
       }
 
-      // Initial call to set the first background
+      // below I am setting the background
       changeBackground();
 
-      // Set interval to change background every 2 seconds
+      // Below code will set interval to change background after every 2 seconds
       setInterval(changeBackground, 500);
     </script>
-    <!-- bootrap JavaScript -->
+    <!-- below cdn links are copied from bootstrap's installation section to support navbar's mobile responsive design  -->
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
       crossorigin="anonymous"
     ></script>
-
-    <!-- bootrap JavaScript -->
   </body>
 </html>

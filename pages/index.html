@@ -71,7 +71,7 @@
     </style>
   </head>
   <body>
-    <!-- bootstrap starts here -->
+    <!-- Below is the code for navbar which is inspired from bootrap -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a href="#"
@@ -127,6 +127,8 @@
         </div>
       </div>
     </nav>
+
+    <!-- This button will take the user to the top of the screen once user click on it -->
     <button
       id="backToTop"
       style="
@@ -145,7 +147,6 @@
     >
       Back to Top
     </button>
-    <!-- bootstrap starts here -->
 
     <!-- displays my name right below the Navbar -->
     <div
@@ -157,7 +158,7 @@
     >
       <!-- div contains greetings that will be manipulated in the JS script below to display my name -->
       <div style="display: flex; justify-content: start; width: 800px">
-        <h2 id="heading1">Hello, This Is</h2>
+        <h4 id="heading1" style="padding: 30px">Hello, This Is</h4>
       </div>
       <div
         class="carousel-container"
@@ -165,12 +166,47 @@
       >
         <!-- below div contains my carousel -->
         <div class="carousel-images" style="margin-bottom: 100px">
-          <img src="/img/2034image.png" alt="Image 1" />
-          <img src="/img/2.jpg" alt="Image 2" />
-          <img src="/img/3.jpg" alt="Image 3" />
+          <img src="../img/2034image.png" alt="Image 1" />
+          <img src="../img/2.jpg" alt="Image 2" />
+          <img src="../img/3.jpg" alt="Image 3" />
         </div>
       </div>
     </div>
+
+    <section class="highlights">
+      <div class="highlight">
+        <img src="../img/AI.jpeg" alt="AI Integration" />
+        <h3>AI Integration</h3>
+        <p>
+          Leading the integration of AI technologies into modern web
+          applications, enhancing user interactions and automation.
+        </p>
+      </div>
+      <div class="highlight">
+        <img src="../img/full stack.jpeg" alt="Full-Stack Expertise" />
+        <h3>Full-Stack Expertise</h3>
+        <p>
+          Proficient in both front-end and back-end technologies, delivering
+          comprehensive solutions from concept to deployment.
+        </p>
+      </div>
+      <div class="highlight">
+        <img src="../img/sustainable tech.jpeg" alt="Responsive Design" />
+        <h3>Responsive Design</h3>
+        <p>
+          Ensuring all applications are fully responsive, providing optimal user
+          experiences across devices.
+        </p>
+      </div>
+      <div class="highlight">
+        <img src="" alt="Sustainable Tech" />
+        <h3>Sustainable Tech</h3>
+        <p>
+          Advocating for environmentally friendly and socially responsible IT
+          practices in all projects.
+        </p>
+      </div>
+    </section>
 
     <!-- below div contains a a visually appealing roadmap of my journey form 2024 - 2033-->
     <div id="roadmap">
@@ -246,7 +282,7 @@
           years.
         </h4> -->
 
-        <!-- pic chart starts -->
+        <!-- Below is pic chart section below my skillsets that displays pie charts -->
         <div style="display: flex; margin-top: 150px; padding-right: 50px">
           <div class="pie" style="--p: 90; --c: darkblue; --b: 5px">
             Front-End
@@ -361,6 +397,7 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      // below code is the night mode that will change the background color from white to dark
       // let num = true;
       // const darkmode = document.getElementById("darkmode");
       // darkmode.addEventListener("click", () => {
@@ -368,14 +405,18 @@
       //   document.body.style.backgroundColor = num ? "#423A55" : "#FFFFFF";
       //   num = !num;
       // });
+      //
+    </script>
+
+    <script>
+      //   const checkbox = document.getElementById("checkbox");
+      //   checkbox.addEventListener("change", () => {
+      //     document.body.classList.toggle("dark");
+      //   });
+      //
     </script>
     <script>
-      const checkbox = document.getElementById("checkbox");
-      checkbox.addEventListener("change", () => {
-        document.body.classList.toggle("dark");
-      });
-    </script>
-    <script>
+      // below Javascript is responsible for dynamically loading my name of the top of the webpage making it asthetically pleasing
       const name = "Abeer Amir";
       const nameSwap = document.getElementById("heading1");
       let i = 0;
@@ -383,7 +424,7 @@
       function typeName() {
         if (i < name.length) {
           if (j <= i) {
-            nameSwap.innerText = `Hello, 안녕하세요, Hola! This is  ${
+            nameSwap.innerText = `Hello, Hola! This is  ${
               name.substring(0, i) + name[j]
             }`;
             j++;
@@ -402,10 +443,11 @@
       setInterval(typeName, 5500);
     </script>
     <script>
-      // Get the button
+      // Below Javascript is responsible for handling the backend functionality of the back to
+      // top button that will take the user back to the top screen. Also when it reached a certain point (<=20), it will hide the button from then user
       const backToTopButton = document.getElementById("backToTop");
 
-      // Show or hide the button based on scroll position
+      // This will show or hide the button based on scroll position
       window.onscroll = function () {
         if (
           document.body.scrollTop > 20 ||
@@ -417,7 +459,7 @@
         }
       };
 
-      // Scroll to top when button is clicked
+      // This will scroll to top when button is clicked
       backToTopButton.onclick = function () {
         window.scrollTo({
           top: 0,

@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <!-- bootrap navbar starts -->
+    <!-- Below is the code for navbar which is inspired from bootrap -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a href="#"
@@ -74,8 +74,7 @@
         </div>
       </div>
     </nav>
-
-    <!-- bootrap navbar ends -->
+    <!-- This button will take the user to the top of the screen once user click on it -->
     <button
       id="backToTop"
       style="
@@ -94,12 +93,15 @@
     >
       Back to Top
     </button>
+
+    <!-- below div displays the page title (about me)  -->
     <div id="aboutme-section" class="aboutme-section" style="font-size: 80px">
       <div style="margin-top: 10px">
         <h1 id="myskillset">About Me</h1>
       </div>
     </div>
 
+    <!-- below div renders a beautiful about me section that contains my image and a brief description -->
     <div
       id="myself"
       style="
@@ -146,7 +148,7 @@
         </div>
       </div>
     </div>
-
+    <!-- below divs contains my quotes / mantras / Philosophy that will look more asthetically on mobile displays-->
     <div class="quote-container">
       <div>
         <h1>My Philosophy</h1>
@@ -207,11 +209,13 @@
       </div>
     </footer>
     <!-- footer up -->
+
     <script>
-      // Get the button
+      // Below Javascript is responsible for handling the backend functionality of the back to
+      // top button that will take the user back to the top screen. Also when it reached a certain point (<=20), it will hide the button from then user
       const backToTopButton = document.getElementById("backToTop");
 
-      // Show or hide the button based on scroll position
+      // This will show or hide the button based on scroll position
       window.onscroll = function () {
         if (
           document.body.scrollTop > 20 ||
@@ -223,7 +227,7 @@
         }
       };
 
-      // Scroll to top when button is clicked
+      // This will scroll to top when button is clicked
       backToTopButton.onclick = function () {
         window.scrollTo({
           top: 0,
@@ -231,6 +235,7 @@
         });
       };
     </script>
+    <!-- below cdn link are copied from bootstrap's installation section to support navbar's mobile responsive design  -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

@@ -216,7 +216,9 @@ h1 {
   .pie {
     margin: 10px; /* Adds space between pie charts */
   }
-
+  .highlight {
+    width: calc(50% - 40px); /* Make 2 cards per row */
+  }
 }
 @media (max-width: 480px) {
   .skillset-section {
@@ -271,6 +273,9 @@ h1 {
 
   .card p {
     font-size: 0.8rem; /* Adjust font size for smaller screens */
+  }
+  .highlight {
+    width: 100%; /* Make 1 card per row */
   }
 }
 
@@ -368,4 +373,42 @@ body.dark .support a {
 
 .support a:hover {
   transform: scale(1.1);
+}
+
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  justify-content: center;
+  padding: 20px;
+}
+
+.highlight {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: calc(25% - 40px); /* Make 4 cards fit per row with gap */
+  transition: transform 0.3s ease;
+}
+
+.highlight img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.highlight h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.highlight p {
+  font-size: 1em;
+  color: #666;
+}
+
+.highlight:hover {
+  transform: scale(1.05);
 }
