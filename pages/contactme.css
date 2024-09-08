@@ -1,3 +1,4 @@
+/* basic form styling */
 .form-container {
   background-color: #ffffff;
   padding: 20px;
@@ -24,6 +25,7 @@ h2 {
   color: #333;
 }
 
+/* styling input, select, and textarea elements */
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -38,6 +40,7 @@ h2 {
   resize: vertical;
 }
 
+/* style for submit button */
 #submitbtn {
   width: 100%;
   padding: 10px;
@@ -48,10 +51,12 @@ h2 {
   cursor: pointer;
 }
 
+/* style for submit button when hovered*/
 #submitbtn:hover {
   background-color: #0056b3;
 }
 
+/* style for card container */
 .card {
   background-color: white;
   border-radius: 10px;
@@ -63,6 +68,7 @@ h2 {
   transition: transform 0.2s;
 }
 
+/* style for card container when hovered */
 .card:hover {
   transform: translateY(-10px);
 }
@@ -76,12 +82,14 @@ h2 {
   color: #333;
 }
 
+/* style for <a> element in card*/
 .card a {
   text-decoration: none;
   color: #007bff;
   font-weight: bold;
 }
 
+/* style for <a> element in card when hovered */
 .card a:hover {
   text-decoration: underline;
 }
@@ -96,23 +104,28 @@ h2 {
   }
 }
 
+/* styling footer element */
 .footer {
   background-color: #343a40;
   padding: 20px 0;
   color: #fff;
 }
+/* style for <a> elements inside .footer */
 .footer a {
   color: #fff;
   margin: 0 15px;
   transition: color 0.3s ease;
 }
+/* style for <a> elements inside .footer once hovered*/
 .footer a:hover {
   color: #007bff;
 }
+/* style for <svg> elements inside .footer */
 .footer svg {
   width: 24px;
   height: 24px;
 }
+/* style for <p> elements inside .footer */
 .footer p {
   margin: 10px 0 0;
 }

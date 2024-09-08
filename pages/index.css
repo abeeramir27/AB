@@ -1,9 +1,12 @@
+/* rest margin, padding, and horizontal overflow for entire page */
 html,
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
+
+/* styling iframe elements */
 iframe {
   width: 100%;
   margin: 0px;
@@ -15,30 +18,39 @@ img {
   margin: 0;
 }
 
-#roadmap {
-  /* margin-top: 60px; */
-  background: linear-gradient(to right, #fbfcd4, #a8f9f5);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  animation: roadmapcolorChange 5s infinite;
-}
-@keyframes roadmapcolorChange {
-  0% {
-    color: #000000;
-  }
-  40% {
-    color: #1684cb;
-  }
-  70% {
-    color: pink;
-  }
-}
-
 h1 {
   text-align: center;
   font-size: 2.5em;
   margin-bottom: 20px;
+}
+
+/* styling for roadmap */
+#roadmap {
+  background: linear-gradient(to right, #fbfcd4, #a8f9f5);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* applies animation that loops every 5 seconds infinitely */
+  animation: roadmapcolorChange 5s infinite; 
+}
+/* defines the keyframes for the 'roadmapcolorChange' animation */
+@keyframes roadmapcolorChange {
+  /* setting custom colours for animation */
+  0% {
+    color: #000000;
+  }
+  20% {
+    color: #920840;
+  }
+  40% {
+    color: #610a8d;
+  }
+  70% {
+    color: #6c0303;
+  }
+  90% {
+    color: #000000;
+  }
 }
 
 .timeline {
@@ -60,11 +72,11 @@ h1 {
   top: 10px;
   height: 100%;
   width: 2px;
-  background: linear-gradient(to bottom, #4caf50, #ffffff /* transparent */);
+  background: linear-gradient(to bottom, #4caf50, #ffffff);
 }
 
 .timeline-item:last-child::before {
-  height: 10px; /* Adjust the height for the last item */
+  height: 10px; 
 }
 
 .timeline-content {
@@ -82,225 +94,69 @@ h1 {
 }
 
 .timeline-content {
-  opacity: 0.5; /* Start with 50% opacity */
-  transform: translateY(20px); /* Slightly move down for effect */
+  opacity: 0.5;
+  transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 .timeline-content {
-  opacity: 0.5; /* Start with 50% opacity */
-  transform: translateX(-50%) translateY(20px); /* Start from left and move down slightly */
+  opacity: 0.5; 
+  transform: translateX(-50%) translateY(20px); 
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* 
- */
 @property --p {
   syntax: "<number>";
   inherits: true;
   initial-value: 0;
 }
 
-.pie {
-  --p: 20;
-  --b: 22px;
-  --c: darkred;
-  /* --w: 160px; */
-  --w: 10rem;
-
-  width: var(--w);
-  aspect-ratio: 1;
-  position: relative;
-  display: inline-grid;
-  margin: 5px;
-  place-content: center;
-  font-size: 25px;
-  font-weight: bold;
-  font-family: sans-serif;
-}
-.pie:before,
-.pie:after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-}
-.pie:before {
-  inset: 0;
-  background: radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b)
-      var(--b) no-repeat,
-    conic-gradient(var(--c) calc(var(--p) * 1%), #0000 0);
-  -webkit-mask: radial-gradient(
-    farthest-side,
-    #0000 calc(99% - var(--b)),
-    #000 calc(100% - var(--b))
-  );
-  mask: radial-gradient(
-    farthest-side,
-    #0000 calc(99% - var(--b)),
-    #000 calc(100% - var(--b))
-  );
-}
-.pie:after {
-  inset: calc(50% - var(--b) / 2);
-  background: var(--c);
-  transform: rotate(calc(var(--p) * 3.6deg))
-    translateY(calc(50% - var(--w) / 2));
-}
-.animate {
-  animation: p 1s 0.5s both;
-}
-.no-round:before {
-  background-size: 0 0, auto;
-}
-.no-round:after {
-  content: none;
-}
-@keyframes p {
-  from {
-    --p: 0;
-  }
-}
-
-.skillset-section {
-  font-size: 80px;
-  padding-bottom: 100px;
-  padding-top: 0px;
-  text-align: center; /* Center the heading */
-  /* background-color: #dbb5b5; */
-}
-
-.skillset-section h1 {
-  background-image: url("../img/broken2.jpg");
-  background-size: cover;
-  background-position: center;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-}
-
-/* Responsive adjustments */
+/* adjustments for responsiveness*/
+/* media query for screens with a maximum width of 1100 pixels */
 @media (max-width: 1100px) {
   .skillset-section {
-    font-size: 60px; /* Smaller font size on medium screens */
+    font-size: 60px;
     padding-bottom: 70px;
   }
   #myskillset {
     font-size: 120px !important;
   }
 }
-
+/* media query for screens with a maximum width of 805 pixels */
 @media (max-width: 805px) {
-  .skillset-section {
-    font-size: 60px; /* Smaller font size on medium screens */
-    padding-bottom: 70px;
-  }
-  #myskillset {
-    font-size: 100px !important;
-  }
-  #justifyskilllset {
-    display: block !important;
-    text-align: center !important;
-  }
-  #skillsetPara {
-    width: 100% !important ; /* Takes full width */
-    margin-bottom: 20px;
-  }
-  #pieContainer {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Allows pie charts to wrap to next line if needed */
-    margin-top: 0; /* Removes top margin */
-    padding-right: 0; /* Removes padding on smaller screens */
-    padding-left: 20px;
-  }
-
-  .pie {
-    margin: 10px; /* Adds space between pie charts */
-  }
-  .highlight {
-    width: calc(50% - 40px); /* Make 2 cards per row */
-  }
 }
+/* media query for screens with a maximum width of 480 pixels */
 @media (max-width: 480px) {
-  .skillset-section {
-    font-size: 40px; /* Smaller font size on small screens */
-    padding-bottom: 50px;
-  }
-  #myskillset {
-    font-size: 80% !important;
-  }
-  #justifyskilllset {
-    display: block !important;
-    text-align: center !important;
-  }
-  #skillsetPara {
-    width: 100% !important ; /* Takes full width */
-    margin-bottom: 20px;
-  }
-  #pieContainer {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Allows pie charts to wrap to next line if needed */
-    margin-top: 0; /* Removes top margin */
-    padding-right: 0; /* Removes padding on smaller screens */
-  }
-
-  .pie {
-    margin: 9px; /* Adds space between pie charts */
-  }
   #cards {
-    flex-direction: column; /* Stack cards vertically on smaller screens */
+    flex-direction: column; 
     padding-bottom: 15px;
   }
 
   .card-container {
-    width: 100%; /* Ensure each card takes full width */
-    margin: 10px 0; /* Adjust margin for smaller screens */
+    width: 100%; 
+    margin: 10px 0; 
   }
 
   .card {
-    max-width: 100%; /* Make sure the card uses the full width of its container */
-    height: auto; /* Allow card height to adjust with content */
-    padding: 12px; /* Adjust padding for smaller screens */
+    max-width: 100%; 
+    height: auto; 
+    padding: 12px; 
   }
 
   .card h2 {
-    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    font-size: 1.2rem; 
   }
 
   .card h4 {
-    font-size: 1rem; /* Adjust font size for smaller screens */
+    font-size: 1rem; 
   }
 
   .card p {
-    font-size: 0.8rem; /* Adjust font size for smaller screens */
+    font-size: 0.8rem; 
   }
   .highlight {
-    width: 100%; /* Make 1 card per row */
+    width: 100%; 
   }
 }
-
-.footer {
-  background-color: #343a40;
-  padding: 20px 0;
-  color: #fff;
-}
-.footer a {
-  color: #fff;
-  margin: 0 15px;
-  transition: color 0.3s ease;
-}
-.footer a:hover {
-  color: #007bff;
-}
-.footer svg {
-  width: 24px;
-  height: 24px;
-}
-.footer p {
-  margin: 10px 0 0;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 * {
   box-sizing: border-box;
@@ -308,7 +164,7 @@ h1 {
 
 body.dark {
   background-color: #292c35;
-} /* #9b59b6 */
+}
 
 body.dark h1,
 body.dark .support a {
@@ -356,7 +212,6 @@ body.dark .support a {
   transform: translateX(24px);
 }
 
-/*  Support me if you like it */
 .support {
   position: absolute;
   right: 20px;
@@ -378,9 +233,9 @@ body.dark .support a {
 .highlights {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Space between cards */
+  gap: 20px;
   justify-content: center;
-  padding: 20px;
+  padding-bottom: 60px;
 }
 
 .highlight {
@@ -389,7 +244,7 @@ body.dark .support a {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
-  width: calc(25% - 40px); /* Make 4 cards fit per row with gap */
+  width: calc(25% - 40px);
   transition: transform 0.3s ease;
 }
 
@@ -412,3 +267,30 @@ body.dark .support a {
 .highlight:hover {
   transform: scale(1.05);
 }
+  /* styling footer element */
+  .footer {
+    background-color: #343a40;
+    padding: 20px 0;
+    color: #fff;
+  }
+  /* style for <a> elements inside .footer */
+  .footer a {
+    color: #fff;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+  }
+  /* style for <a> elements inside .footer once hovered*/
+  .footer a:hover {
+    color: #007bff;
+  }
+  /* style for <svg> elements inside .footer */
+  .footer svg {
+    width: 24px;
+    height: 24px;
+  }
+  /* style for <p> elements inside .footer */
+  .footer p {
+    margin: 10px 0 0;
+  }
+  
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");

@@ -19,8 +19,11 @@
   </head>
 
   <body>
-    <!-- Below is the code for navbar which is inspired from bootrap -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!-- Below is the bootstrap nav code with modifications -->
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary"
+      style="position: sticky; top: 0; z-index: 1000"
+    >
       <div class="container-fluid">
         <a href="#"
           ><img
@@ -57,17 +60,17 @@
               </a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link" href="about.html">
+              <a class="nav-link" href="aboutme.html">
                 <h4>About Me</h4>
               </a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link" href="achievement.html">
+              <a class="nav-link" href="achievements.html">
                 <h4>Achievements</h4>
               </a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link" href="contact.html">
+              <a class="nav-link" href="contactme.html">
                 <h4>Contact Me</h4>
               </a>
             </li>
@@ -75,15 +78,16 @@
         </div>
       </div>
     </nav>
-    <!-- below div displays the page title right below the Navbar -->
+    <!-- bootstrap nav code ends here -->
 
+    <!-- below is the main heading for my services -->
     <div id="Services-section" class="Services-section" style="font-size: 80px">
       <h1 id="myservices" style="font-size: 220px; overflow-wrap: break-word">
-        MY SERVICES
+        My Services
       </h1>
     </div>
 
-    <!-- Below div willl generate cards that will highligh my skill set in differnet IT domains -->
+    <!-- below div generates cards that highlight my services in differnet IT domains -->
     <div
       id="cards"
       style="
@@ -94,7 +98,7 @@
         padding-bottom: 20px;
       "
     >
-      <!-- cards  1 start here -->
+      <!-- card 1 starts here -->
       <div style="display: flex; margin: 20px; flex: 1 1 300px">
         <div
           class="card"
@@ -131,16 +135,22 @@
             <h2 style="display: flex; justify-content: center">
               Web Development
             </h2>
-            <h4 style="margin-left: 5px">Skills</h4>
-            <p style="margin-left: 5px">
-              JavaScript | TypeScript | Tailwind CSS | Node | Docker
+            <p style="padding-top: 5px; margin-left: 5px">
+              <strong>Custom Web Solutions:</strong> Tailored web applications
+              built to meet your specific business needs, leveraging modern
+              technologies like React, Node.js, and Express.
             </p>
-            <h4 style="margin-left: 5px">Tools & Libraries</h4>
-            <p style="margin-left: 5px">React | Next.js | Nest.js | Angular</p>
+            <p style="margin-left: 5px">
+              <strong>Scalable Architecture:</strong> Design and implement
+              scalable, robust, and high-performance web architectures to
+              support business growth.
+            </p>
           </div>
         </div>
       </div>
-      <!-- card 2 -->
+      <!-- card  1 ends here -->
+
+      <!-- card 2 starts here-->
       <div style="display: flex; margin: 20px; flex: 1 1 300px">
         <div
           class="card"
@@ -172,19 +182,23 @@
             "
           ></div>
           <h2 style="display: flex; justify-content: center">
-            Machine Learning
+            AI User Experiences
           </h2>
-          <h4 style="margin-left: 5px">Skills</h4>
-          <p style="margin-left: 5px">
-            Python | TensorFlow | PyTorch | Scikit-Learn
+          <p style="padding-top: 5px; margin-left: 5px">
+            <strong>Intelligent Automation:</strong> Develop AI-driven
+            automation solutions that streamline processes, enhance user
+            interactions, and boost productivity.
           </p>
-          <h4 style="margin-left: 5px">Tools & Libraries</h4>
           <p style="margin-left: 5px">
-            Jupyter | Notebook | Pandas | NumPy | Matplotlib | Seaborn
+            <strong>Personalized User Interfaces:</strong> Implement AI to
+            create adaptive and personalized user interfaces that cater to
+            individual user preferences and behaviors.
           </p>
         </div>
       </div>
-      <!-- card 3 -->
+      <!-- card 2 ends here -->
+
+      <!-- card 3 starts here -->
       <div style="display: flex; margin: 20px; flex: 1 1 300px">
         <div
           class="card"
@@ -215,35 +229,25 @@
               z-index: 0;
             "
           ></div>
-          <h2 style="display: flex; justify-content: center">Block Chain</h2>
-          <h4 style="margin-left: 5px">Skills</h4>
-          <p style="margin-left: 5px">
-            Contracts | Ethereum | Truffle | Hardhat
+          <h2 style="display: flex; justify-content: center">
+            Cloud Solutions
+          </h2>
+          <p style="padding-top: 5px; margin-left: 5px">
+            <strong>Intelligent Automation:</strong> Architect cloud-based
+            solutions that ensure scalability, security, and cost-efficiency,
+            leveraging platforms like AWS, Azure, and Google Cloud.
           </p>
-          <h4 style="margin-left: 5px">Tools & Libraries</h4>
           <p style="margin-left: 5px">
-            MetaMask | Ganache | Remix | Infura | IPFS
+            <strong>DevOps & Continuous Integration</strong> Implement DevOps
+            practices and CI/CD pipelines to accelerate development cycles,
+            improve collaboration, and enhance deployment reliability.
           </p>
         </div>
       </div>
+      <!-- card 3 ends here -->
     </div>
 
-    <!-- Below div contains another title  -->
-    <div id="Services-section" class="Services-section" style="font-size: 80px">
-      <h1
-        id="myskillset"
-        style="
-          font-size: 220px;
-          padding-bottom: 30px;
-          overflow-wrap: break-word;
-          padding-top: 100px;
-        "
-      >
-        My Clientele
-      </h1>
-    </div>
-
-    <!-- This button will take the user to the top of the screen once user click on it -->
+    <!-- this button takes the user to the top of the screen once user clicks on it -->
     <button
       id="backToTop"
       style="
@@ -262,6 +266,21 @@
     >
       Back to Top
     </button>
+
+    <!-- below is the main heading for my clientele -->
+    <div id="Services-section" class="Services-section" style="font-size: 80px">
+      <h1
+        id="myskillset"
+        style="
+          font-size: 220px;
+          padding-bottom: 30px;
+          overflow-wrap: break-word;
+          padding-top: 100px;
+        "
+      >
+        My Clientele
+      </h1>
+    </div>
     <!----------- cards section starts ------------>
     <div
       id="cards"
@@ -287,7 +306,7 @@
             padding: 20px;
             box-sizing: border-box;
           "
-          onclick="document.getElementById('apple-description').scrollIntoView({ behavior: 'smooth' });"
+          onclick="document.getElementById('acme-description').scrollIntoView({ behavior: 'smooth' });"
         >
           <div
             style="
@@ -308,18 +327,20 @@
 
           <div style="position: relative; z-index: 1">
             <div style="display: flex; justify-content: space-between">
-              <h2 style="display: flex; justify-content: center">Apple Inc</h2>
+              <h2 style="display: flex; justify-content: center">
+                Acme Innovations
+              </h2>
               <img
-                src="../img/apple.png"
+                src="../img/Acme_Innovations-removebg-preview.png"
                 width="140px"
                 style="padding-right: 40px"
               />
             </div>
             <h4 style="margin-left: 5px">Services</h4>
             <p style="margin-left: 5px">
-              <li>Application Development</li>
-              <li>Siri Management</li>
-              <li>MacOS bug fixing</li>
+              <li>Full-Stack Web Application Development</li>
+              <li>AI-Powered User Experience Design</li>
+              <li>Cloud Integration Services</li>
             </p>
           </div>
         </div>
@@ -339,7 +360,7 @@
             padding: 20px;
             box-sizing: border-box;
           "
-          onclick="document.getElementById('microsoft-description').scrollIntoView({ behavior: 'smooth' });"
+          onclick="document.getElementById('nextgen-description').scrollIntoView({ behavior: 'smooth' });"
         >
           <div
             style="
@@ -358,14 +379,20 @@
             "
           ></div>
           <div style="display: flex; justify-content: space-between">
-            <h2 style="display: flex; justify-content: center">Microsoft</h2>
-            <img src="../img/microsoft.png" alt="" width="100px" />
+            <h2 style="display: flex; justify-content: center">
+              NextGen HealthTech
+            </h2>
+            <img
+              src="../img/NextGen_HealthTech-removebg-preview.png"
+              alt=""
+              width="100px"
+            />
           </div>
           <h4 style="margin-left: 5px">Services</h4>
           <p style="margin-left: 5px">
-            <li>Copilot AI Improvement</li>
-            <li>SEO optimization</li>
-            <li>R&D</li>
+            <li>Healthcare Web Portal Development</li>
+            <li>AI-Driven Patient Data Analytics</li>
+            <li>Secure API Integration for Telemedicine</li>
           </p>
         </div>
       </div>
@@ -384,7 +411,7 @@
             padding: 20px;
             box-sizing: border-box;
           "
-          onclick="document.getElementById('amazon-description').scrollIntoView({ behavior: 'smooth' });"
+          onclick="document.getElementById('globalecom-description').scrollIntoView({ behavior: 'smooth' });"
         >
           <div
             style="
@@ -403,18 +430,20 @@
             "
           ></div>
           <div style="display: flex; justify-content: space-between">
-            <h2 style="display: flex; justify-content: center">Amazon</h2>
+            <h2 style="display: flex; justify-content: center">
+              GlobalEcom Solutions
+            </h2>
             <img
-              src="../img/amazon.png"
+              src="../img/GlobalEcom_Solutions-removebg-preview.png"
               width="140px"
               style="padding-right: 40px"
             />
           </div>
           <h4 style="margin-left: 5px; padding-top: 42px">Services</h4>
           <p style="margin-left: 5px">
-            <li>Cloud Architecture Optimization</li>
-            <li>AWS Infrastructure Management</li>
-            <li>E-commerce Platform Enhancement</li>
+            <li>E-Commerce Platform Optimization</li>
+            <li>AI-Driven Product Recommendation Systems</li>
+            <li>Seamless Payment Gateway Integration</li>
           </p>
         </div>
       </div>
@@ -432,7 +461,7 @@
             padding: 20px;
             box-sizing: border-box;
           "
-          onclick="document.getElementById('meta-description').scrollIntoView({ behavior: 'smooth' });"
+          onclick="document.getElementById('urbanmob-description').scrollIntoView({ behavior: 'smooth' });"
         >
           <div
             style="
@@ -451,18 +480,20 @@
             "
           ></div>
           <div style="display: flex; justify-content: space-between">
-            <h2 style="display: flex; justify-content: center">Meta</h2>
+            <h2 style="display: flex; justify-content: center">
+              Urban Mobility
+            </h2>
             <img
-              src="../img/meta.png"
+              src="../img/Urban_Mobility-removebg-preview.png"
               width="180px"
               style="padding-right: 40px"
             />
           </div>
           <h4 style="margin-left: 5px; padding-top: 42px">Services</h4>
           <p style="margin-left: 5px">
-            <li>Enhancing User Privacy Settings</li>
-            <li>AI Algorithms for Content Curation</li>
-            <li>Ad Delivery Improvement</li>
+            <li>Autonomous Vehicle Control Software</li>
+            <li>Real-Time Traffic Data Analysis</li>
+            <li>Predictive Maintenance Using AI</li>
           </p>
         </div>
       </div>
@@ -480,7 +511,7 @@
             padding: 20px;
             box-sizing: border-box;
           "
-          onclick="document.getElementById('tesla-description').scrollIntoView({ behavior: 'smooth' });"
+          onclick="document.getElementById('ecoenergy-description').scrollIntoView({ behavior: 'smooth' });"
         >
           <div
             style="
@@ -499,18 +530,20 @@
             "
           ></div>
           <div style="display: flex; justify-content: space-between">
-            <h2 style="display: flex; justify-content: center">Tesla</h2>
+            <h2 style="display: flex; justify-content: center">
+              EcoEnergy Corp
+            </h2>
             <img
-              src="../img/tesla.png"
+              src="../img/EcoEnergy_Corp-removebg-preview.png"
               width="140px"
               style="padding-right: 40px"
             />
           </div>
           <h4 style="margin-left: 5px; padding-top: 42px">Services</h4>
           <p style="margin-left: 5px">
-            <li>Autonomous Driving Software Optimization</li>
-            <li>Electric Vehicle System Diagnostics</li>
-            <li>Energy Storage Solutions</li>
+            <li>Smart Grid Monitoring Systems</li>
+            <li>AI-Powered Energy Consumption Forecasting</li>
+            <li>Renewable Energy Data Analytics</li>
           </p>
         </div>
       </div>
@@ -528,7 +561,7 @@
             padding: 20px;
             box-sizing: border-box;
           "
-          onclick="document.getElementById('costco-description').scrollIntoView({ behavior: 'smooth' });"
+          onclick="document.getElementById('fintech-description').scrollIntoView({ behavior: 'smooth' });"
         >
           <div
             style="
@@ -547,25 +580,27 @@
             "
           ></div>
           <div style="display: flex; justify-content: space-between">
-            <h2 style="display: flex; justify-content: center">Costco</h2>
+            <h2 style="display: flex; justify-content: center">
+              Fintech Dynamics
+            </h2>
             <img
-              src="../img/costco.png"
+              src="../img/Fintech_Dynamics-removebg-preview.png"
               width="140px"
               style="padding-right: 40px"
             />
           </div>
           <h4 style="margin-left: 5px; padding-top: 42px">Services</h4>
           <p style="margin-left: 5px">
-            <li>Supply Chain Automation</li>
-            <li>Warehouse Management Systems</li>
-            <li>Customer Loyalty Program Enhancements</li>
+            <li>Financial Application Development</li>
+            <li>AI-Powered Fraud Detection</li>
           </p>
         </div>
       </div>
     </div>
-    <!-- cards ends  -->
+    <!-- cards end here -->
 
-    <!-- below section will display horizontal cards that contains the description of the companies i work with in detail -->
+    <!-- below section will display horizontal cards that contain the description of 
+    the companies i work with, in detail -->
     <div
       id="descriptions"
       style="padding: 40px; max-width: 800px; margin: 0 auto; text-align: left"
@@ -582,114 +617,121 @@
         About Our Collaborations
       </h2>
 
-      <div class="company-description" id="apple-description">
+      <div class="company-description" id="acme-description">
         <h3>
           <img
-            src="../img/apple.png"
-            alt="Apple Icon"
+            src="../img/Acme_Innovations-removebg-preview.png"
+            alt="Acme Icon"
             width="30px"
             style="vertical-align: middle"
           />
-          Apple Inc:
+          Acme Innovations:
         </h3>
         <p>
-          As a trusted partner of Apple, we provide top-tier services in
-          application development, Siri management, and macOS bug fixing. Our
-          expertise ensures smooth integration and performance enhancements
-          across Apple's software ecosystem.
+          Our partnership with Acme Innovations is centered on providing
+          customized online applications and AI-enabled user interfaces. By
+          integrating modern technologies and cloud solutions, we guarantee that
+          Acme Innovations can offer scalable, robust, and highly responsive
+          products to their clients.
         </p>
       </div>
 
-      <div class="company-description" id="microsoft-description">
+      <div class="company-description" id="nextgen-description">
         <h3>
           <img
-            src="../img/microsoft.png"
-            alt="Microsoft Icon"
+            src="../img/NextGen_HealthTech-removebg-preview.png"
+            alt="nextgen Icon"
             width="30px"
             style="vertical-align: middle"
           />
-          Microsoft:
+          NextGen HealthTech:
         </h3>
         <p>
-          Our collaboration with Microsoft spans various domains including AI
-          improvement for Copilot, SEO optimization, and research and
-          development. We strive to deliver cutting-edge solutions that help
-          Microsoft stay ahead in innovation.
+          Partnering with NextGen HealthTech, we create cutting-edge healthcare
+          portals and AI-powered patient data analytics solutions. Our work
+          enables NextGen to provide secure and efficient telemedicine services,
+          improving patient care and expediting healthcare procedures.
         </p>
       </div>
 
-      <div class="company-description" id="amazon-description">
+      <div class="company-description" id="globalecom-description">
         <h3>
           <img
-            src="../img/amazon.png"
-            alt="Amazon Icon"
+            src="../img/GlobalEcom_Solutions-removebg-preview.png"
+            alt="globalecom Icon"
             width="30px"
             style="vertical-align: middle"
           />
-          Amazon:
+          GlobalEcom Solutions:
         </h3>
         <p>
-          Working with Amazon, we assist in cloud architecture optimization, AWS
-          infrastructure management, and e-commerce platform enhancement,
-          helping Amazon provide better user experiences and scalable cloud
-          solutions.
+          In collaboration with GlobalEcom Solutions, we optimize e-commerce
+          platforms by integrating payment gateways seamlessly and putting
+          AI-driven product recommendation systems into place. Our efforts help
+          GlobalEcom maintain its leadership position in the competitive online
+          retail industry by delivering personalized and efficient shopping
+          experiences.
         </p>
       </div>
 
-      <div class="company-description" id="meta-description">
+      <div class="company-description" id="urbanmob-description">
         <h3>
           <img
-            src="../img/meta.png"
-            alt="Meta Icon"
+            src="../img/Urban_Mobility-removebg-preview.png"
+            alt="urbanmob Icon"
             width="30px"
             style="vertical-align: middle"
           />
-          Meta:
+          Urban Mobility:
         </h3>
         <p>
-          Our partnership with Meta focuses on enhancing user privacy settings,
-          developing AI algorithms for content curation, and improving ad
-          delivery mechanisms on Facebook and Instagram platforms.
+          Working with Urban Mobility, we enhance autonomous vehicle control
+          software and offer real-time traffic data analysis services. Our
+          partnership uses AI to optimize mobility services and do predictive
+          maintenance, with the goal of revolutionizing urban transportation.
         </p>
       </div>
 
-      <div class="company-description" id="tesla-description">
+      <div class="company-description" id="ecoenergy-description">
         <h3>
           <img
-            src="../img/tesla.png"
-            alt="Tesla Icon"
+            src="../img/EcoEnergy_Corp-removebg-preview.png"
+            alt="ecoenergy Icon"
             width="30px"
             style="vertical-align: middle"
           />
-          Tesla:
+          EcoEnergy Corp:
         </h3>
         <p>
-          Collaborating with Tesla, we contribute to autonomous driving software
-          optimization, electric vehicle system diagnostics, and energy storage
-          solutions, aiding in Tesla's mission to accelerate the world's
-          transition to sustainable energy.
+          Our collaboration with EcoEnergy Corp is focused on creating
+          AI-powered energy consumption forecasting tools and smart grid
+          monitoring solutions. We assist EcoEnergy in maximizing renewable
+          energy resources and advancing sustainable energy initiatives by
+          utilizing state-of-the-art technologies.
         </p>
       </div>
 
-      <div class="company-description" id="costco-description">
+      <div class="company-description" id="fintech-description">
         <h3>
           <img
-            src="../img/costco.png"
-            alt="Costco Icon"
+            src="../img/Fintech_Dynamics-removebg-preview.png"
+            alt="fintech Icon"
             width="30px"
             style="vertical-align: middle"
           />
-          Costco:
+          Fintech Dynamics:
         </h3>
         <p>
-          With Costco, we provide services in supply chain automation, warehouse
-          management systems, and customer loyalty program enhancements, helping
-          Costco maintain operational efficiency and customer satisfaction.
+          Partnering with Fintech Dynamics, we develop AI-driven fraud detection
+          systems, financial apps, and custom APIs for banking integration. Our
+          knowledge supports Fintech Dynamics in providing safe and cutting-edge
+          financial services, boosting efficiency and confidence in the digital
+          finance industry.
         </p>
       </div>
     </div>
 
-    <!-- footer starts here -->
+    <!--  below is the footer for my webpage -->
     <footer class="footer text-center">
       <div class="container">
         <div class="d-flex justify-content-center align-items-center">
@@ -717,16 +759,46 @@
               />
             </svg>
           </a>
+          <a href="https://wa.me/+923325228522" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-whatsapp"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+              />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/abeeramir001/" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-linkedin"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+              />
+            </svg>
+          </a>
         </div>
-        <p class="mt-3">&copy; 2024 Abeerion</p>
+        <p class="mt-3">&copy; 2024 Abeer Amir</p>
       </div>
     </footer>
+
     <script>
-      // Below Javascript is responsible for handling the backend functionality of the back to
-      // top button that will take the user back to the top screen. Also when it reached a certain point (<=20), it will hide the button from then user
+      // below Javascript is responsible for handling the backend functionality of the back to
+      // top button that will take the user back to the top screen. Also when it reaches a
+      // certain point (<=20), it will hide the button from then user
       const backToTopButton = document.getElementById("backToTop");
 
-      // This will show or hide the button based on scroll position
+      // this will show or hide the button based on scroll position
       window.onscroll = function () {
         if (
           document.body.scrollTop > 20 ||
@@ -737,7 +809,7 @@
           backToTopButton.style.display = "none";
         }
       };
-      // This will scroll to top when button is clicked
+      // this will scroll to top when button is clicked
       backToTopButton.onclick = function () {
         window.scrollTo({
           top: 0,
@@ -747,17 +819,12 @@
     </script>
 
     <script>
-      // below JS code will change the background color of the cards below "MY SERVICES" title
+      // below JS code will change the background color of the cards within "My Services" div
       const gradients = [
-        "linear-gradient(to right, #939898, #c4add6)", // 1
-        "linear-gradient(to right, #7d8181, #b9a5c9)", // 2
-        "linear-gradient(to right, #939898, #c4add6)", // 3
-        "linear-gradient(to right, #7d8181, #b9a5c9)", // 3
-        // "linear-gradient(to right, #bd5ed4, #b542d1)", // 4
-        // "linear-gradient(to right, #af5ed4, #a33dd2)", // 5
-        // "linear-gradient(to right, #a15fcf, #9135d1)", // 6
-        // "linear-gradient(to right, #a25cdc, #9740df)", // 7
-        // "linear-gradient(to right, #a465e3, ##9950e1)", // 8
+        "linear-gradient(to right, #939898, #c4add6)",
+        "linear-gradient(to right, #7d8181, #b9a5c9)",
+        "linear-gradient(to right, #939898, #c4add6)",
+        "linear-gradient(to right, #7d8181, #b9a5c9)",
       ];
 
       let cardindex = 0;
@@ -779,14 +846,19 @@
       // below I am setting the background
       changeBackground();
 
-      // Below code will set interval to change background after every 2 seconds
+      // below code sets interval to change background after every 2 seconds
       setInterval(changeBackground, 500);
     </script>
-    <!-- below cdn links are copied from bootstrap's installation section to support navbar's mobile responsive design  -->
 
+    <!-- below cdn links are copied from bootstrap's installation section to support navbar's mobile responsive design  -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
   </body>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HomePage</title>
+    <title>Homepage</title>
     <link rel="stylesheet" href="index.css" />
     <link
       rel="stylesheet"
@@ -17,62 +17,59 @@
     />
     <style>
       #heading1 {
-        opacity: 0.2;
+        opacity: 0.9;
         font-size: 90px;
         animation: colorChange 5s infinite;
       }
 
       @keyframes colorChange {
         0% {
-          color: black;
+          color: #cfc009;
         }
-        33% {
-          color: white;
+        20% {
+          color: #01a0ad;
         }
-        66% {
-          color: blue;
+        40% {
+          color: #ab0050;
+        }
+        60% {
+          color: #ab0050;
         }
         100% {
-          color: black;
+          color: #cfc009;
         }
       }
-      /* @keyframes colorChange {
-        0% {
-          color: red;
-        }
-        33% {
-          color: green;
-        }
-        66% {
-          color: yellow;
-        }
-        100% {
-          color: red;
-        }
-      } */
 
       .carousel-container {
         position: relative;
         width: 500px;
-        overflow: hidden; /* Hide overflowing images */
+        overflow: hidden;
       }
 
       .carousel-images {
         display: flex;
-        width: 100%; /* Ensure the flex container takes up the full width */
-        transition: transform 0.5s ease-in-out; /* Smooth transition */
+        width: 100%;
+        transition: transform 0.5s ease-in-out;
       }
 
       .carousel-images img {
-        width: 500px; /* Each image is the width of the container */
-        flex-shrink: 0; /* Prevent images from shrinking */
+        width: 500px;
+        flex-shrink: 0;
         height: auto;
       }
     </style>
   </head>
   <body>
-    <!-- Below is the code for navbar which is inspired from bootrap -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!-- below is the bootstrap nav code with modifications -->
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary"
+      style="
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 0 !important;
+        scroll-behavior: auto;
+      "
+    >
       <div class="container-fluid">
         <a href="#"
           ><img
@@ -109,17 +106,17 @@
               </a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link" href="about.html">
+              <a class="nav-link" href="aboutme.html">
                 <h4>About Me</h4>
               </a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link" href="achievement.html">
+              <a class="nav-link" href="achievements.html">
                 <h4>Achievements</h4>
               </a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link" href="contact.html">
+              <a class="nav-link" href="contactme.html">
                 <h4>Contact Me</h4>
               </a>
             </li>
@@ -127,8 +124,9 @@
         </div>
       </div>
     </nav>
+    <!-- bootstrap nav code ends here -->
 
-    <!-- This button will take the user to the top of the screen once user click on it -->
+    <!-- this button takes the user to the top of the screen once user clicks on it -->
     <button
       id="backToTop"
       style="
@@ -148,7 +146,7 @@
       Back to Top
     </button>
 
-    <!-- displays my name right below the Navbar -->
+    <!-- displays my name right below the Navbar in a div -->
     <div
       style="
         display: flex;
@@ -158,14 +156,17 @@
     >
       <!-- div contains greetings that will be manipulated in the JS script below to display my name -->
       <div style="display: flex; justify-content: start; width: 800px">
-        <h4 id="heading1" style="padding: 30px">Hello, This Is</h4>
+        <h4 id="heading1" style="padding: 30px; margin-top: 130px">
+          Hello, This Is
+        </h4>
       </div>
+
+      <!-- below div contains my carousel -->
       <div
         class="carousel-container"
         style="display: flex; position: static; justify-content: end"
       >
-        <!-- below div contains my carousel -->
-        <div class="carousel-images" style="margin-bottom: 100px">
+        <div class="carousel-images" style="margin: 50px">
           <img src="../img/2034image.png" alt="Image 1" />
           <img src="../img/2.jpg" alt="Image 2" />
           <img src="../img/3.jpg" alt="Image 3" />
@@ -173,45 +174,10 @@
       </div>
     </div>
 
-    <section class="highlights">
-      <div class="highlight">
-        <img src="../img/AI.jpeg" alt="AI Integration" />
-        <h3>AI Integration</h3>
-        <p>
-          Leading the integration of AI technologies into modern web
-          applications, enhancing user interactions and automation.
-        </p>
-      </div>
-      <div class="highlight">
-        <img src="../img/full stack.jpeg" alt="Full-Stack Expertise" />
-        <h3>Full-Stack Expertise</h3>
-        <p>
-          Proficient in both front-end and back-end technologies, delivering
-          comprehensive solutions from concept to deployment.
-        </p>
-      </div>
-      <div class="highlight">
-        <img src="../img/sustainable tech.jpeg" alt="Responsive Design" />
-        <h3>Responsive Design</h3>
-        <p>
-          Ensuring all applications are fully responsive, providing optimal user
-          experiences across devices.
-        </p>
-      </div>
-      <div class="highlight">
-        <img src="" alt="Sustainable Tech" />
-        <h3>Sustainable Tech</h3>
-        <p>
-          Advocating for environmentally friendly and socially responsible IT
-          practices in all projects.
-        </p>
-      </div>
-    </section>
-
-    <!-- below div contains a a visually appealing roadmap of my journey form 2024 - 2033-->
+    <!-- below div contains a a visually appealing roadmap of my journey from 2024 - 2033-->
     <div id="roadmap">
       <h1>My Roadmap</h1>
-      <!-- below div contains sections that contains each of my roadmap  -->
+      <!-- below div contains sections that display each milestone of my career -->
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-content">
@@ -256,44 +222,45 @@
       </div>
     </div>
 
-    <!-- below div contains a heading with appealing styling along with a paragraph about me along with Pie charts of my skillsets
-        -->
-    <div id="skillset-section" class="skillset-section" style="font-size: 80px">
-      <h1
-        id="myskillset"
-        style="
-          font-size: 220px;
-          padding-bottom: 30px;
-          overflow-wrap: break-word;
-          /* background-color: #dbb5b5; */
-        "
-      >
-        MY SKILLSETS
-      </h1>
-      <div
-        id="justifyskilllset"
-        style="display: flex; justify-content: space-between"
-      >
-        <!-- <h4
-          id="skillsetPara"
-          style="text-align: justify; width: 60%; font-size: 30px"
-        >
-          Since I am a student currently, I can only envision for the next 10
-          years.
-        </h4> -->
-
-        <!-- Below is pic chart section below my skillsets that displays pie charts -->
-        <div style="display: flex; margin-top: 150px; padding-right: 50px">
-          <div class="pie" style="--p: 90; --c: darkblue; --b: 5px">
-            Front-End
-          </div>
-          <div class="pie" style="--p: 90; --c: red; --b: 5px">Back-End</div>
-          <div class="pie" style="--p: 90; --c: green; --b: 5px">AI / ML</div>
-        </div>
+    <!-- below div contains key highlights about what i have to offer -->
+    <h1 style="font-size: 40px; margin-top: 50px">Key Highlights</h1>
+    <br />
+    <section class="highlights">
+      <div class="highlight">
+        <img src="../img/AI.jpeg" alt="AI Integration" />
+        <h3>AI Integration</h3>
+        <p>
+          Leading integration of AI technologies into modern web applications
+          aiming to enhance user interactions.
+        </p>
       </div>
-    </div>
+      <div class="highlight">
+        <img src="../img/full stack.jpeg" alt="Full-Stack Expertise" />
+        <h3>Full-Stack Expertise</h3>
+        <p>
+          Skilled in both front-end and back-end technologies, providing
+          comprehensive solutions from design to deployment.
+        </p>
+      </div>
+      <div class="highlight">
+        <img src="../img/responsive design.jpg" alt="Responsive Design" />
+        <h3>Responsive Design</h3>
+        <p>
+          Ensuring that every application is fully responsive, and offers optimal user
+          experiences across devices.
+        </p>
+      </div>
+      <div class="highlight">
+        <img src="../img/sustainable tech.jpeg" alt="Sustainable Tech" />
+        <h3>Sustainable Tech</h3>
+        <p>
+          Promoting the use of socially and ecologically conscious IT
+          practices in all projects.
+        </p>
+      </div>
+    </section>
 
-    <!--  below div contains footer for my webpage -->
+    <!--  below is the footer for my webpage -->
     <footer class="footer text-center">
       <div class="container">
         <div class="d-flex justify-content-center align-items-center">
@@ -321,8 +288,36 @@
               />
             </svg>
           </a>
+          <a href="https://wa.me/+923325228522" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-whatsapp"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+              />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/abeeramir001/" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-linkedin"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+              />
+            </svg>
+          </a>
         </div>
-        <p class="mt-3">&copy; 2024 Abeerion</p>
+        <p class="mt-3">&copy; 2024 Abeer Amir</p>
       </div>
     </footer>
 
@@ -336,12 +331,15 @@
         if (index >= slides.length) currentIndex = 0;
         if (index < 0) currentIndex = slides.length - 1;
 
-        const offset = -currentIndex * 500; // Adjust for image width
+        // adjusting image width
+        const offset = -currentIndex * 500;
         document.querySelector(
           ".carousel-images"
         ).style.transform = `translateX(${offset}px)`;
       }
-      // below function is responsible for displaying the above showslide() along with updating the index of the images
+
+      // below function is responsible for displaying the above showslide()
+      // along with updating the index of the images
       function nextSlide() {
         currentIndex++;
         showSlide(currentIndex);
@@ -352,6 +350,7 @@
 
       showSlide(currentIndex);
     </script>
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const timelineContents = document.querySelectorAll(".timeline-content");
@@ -362,14 +361,15 @@
           timelineContents.forEach((content) => {
             const rect = content.getBoundingClientRect();
             const distanceFromTop = rect.top;
-            // below I  calculated vertical  position
+
+            // below I have calculated the vertical position
             const opacity = Math.min(
               1,
               (windowHeight - distanceFromTop + 100) / (windowHeight / 2)
             );
             content.style.opacity = opacity;
 
-            // below I  calculated horizontal position
+            // below I have calculated the vertical position
             const translateX = Math.min(
               0,
               ((windowHeight - distanceFromTop + 100) / (windowHeight / 2)) *
@@ -381,42 +381,14 @@
         }
 
         window.addEventListener("scroll", handleScroll);
-        handleScroll(); // This will initialize the call to set styles based on the current
+        handleScroll(); // this initializes the call to set styles based on the current
         // scroll position of the roadmap's div(s)
       });
     </script>
-    <!-- below cdn links are copied from bootstrap's installation section to support navbar's mobile responsive design  -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      // below code is the night mode that will change the background color from white to dark
-      // let num = true;
-      // const darkmode = document.getElementById("darkmode");
-      // darkmode.addEventListener("click", () => {
-      //   num ? (darkmode.innerHTML = "Light") : (darkmode.innerHTML = "Night");
-      //   document.body.style.backgroundColor = num ? "#423A55" : "#FFFFFF";
-      //   num = !num;
-      // });
-      //
-    </script>
 
     <script>
-      //   const checkbox = document.getElementById("checkbox");
-      //   checkbox.addEventListener("change", () => {
-      //     document.body.classList.toggle("dark");
-      //   });
-      //
-    </script>
-    <script>
-      // below Javascript is responsible for dynamically loading my name of the top of the webpage making it asthetically pleasing
+      // below Javascript is responsible for dynamically loading my name of the top of
+      // the webpage making it asthetically pleasing
       const name = "Abeer Amir";
       const nameSwap = document.getElementById("heading1");
       let i = 0;
@@ -424,11 +396,12 @@
       function typeName() {
         if (i < name.length) {
           if (j <= i) {
-            nameSwap.innerText = `Hello, Hola! This is  ${
+            nameSwap.innerText = `Hello, Olá, Hola! It's  ${
               name.substring(0, i) + name[j]
             }`;
             j++;
-            setTimeout(typeName, 100); // Adjust the speed here
+            // adjust speed here
+            setTimeout(typeName, 100);
           } else {
             i++;
             j = 0;
@@ -442,12 +415,14 @@
       typeName();
       setInterval(typeName, 5500);
     </script>
+
     <script>
-      // Below Javascript is responsible for handling the backend functionality of the back to
-      // top button that will take the user back to the top screen. Also when it reached a certain point (<=20), it will hide the button from then user
+      // below Javascript is responsible for handling the backend functionality of the back to
+      // top button that will take the user back to the top screen. Also when it reaches a
+      // certain point (<=20), it will hide the button from then user
       const backToTopButton = document.getElementById("backToTop");
 
-      // This will show or hide the button based on scroll position
+      // this will show or hide the button based on scroll position
       window.onscroll = function () {
         if (
           document.body.scrollTop > 20 ||
@@ -459,7 +434,7 @@
         }
       };
 
-      // This will scroll to top when button is clicked
+      // this will scroll to top when button is clicked
       backToTopButton.onclick = function () {
         window.scrollTo({
           top: 0,
@@ -467,5 +442,17 @@
         });
       };
     </script>
+
+    <!-- below cdn links are copied from bootstrap's installation section to support navbar's mobile responsive design  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

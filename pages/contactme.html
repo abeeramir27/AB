@@ -3,16 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
-    <link rel="stylesheet" href="contact.css" />
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="contactme.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
   </head>
   <body>
-    <!-- Below is the code for navbar which is inspired from bootrap -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!-- below is the bootstrap nav code with modifications -->
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary"
+      style="position: sticky; top: 0; z-index: 1000"
+    >
       <div class="container-fluid">
         <a href="#"
           ><img
@@ -49,17 +52,17 @@
               </a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link" href="about.html">
+              <a class="nav-link" href="aboutme.html">
                 <h4>About Me</h4>
               </a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link" href="achievement.html">
+              <a class="nav-link" href="achievements.html">
                 <h4>Achievements</h4>
               </a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link active" href="contact.html">
+              <a class="nav-link active" href="contactme.html">
                 <h4>Contact Me</h4>
               </a>
             </li>
@@ -67,8 +70,9 @@
         </div>
       </div>
     </nav>
-    <!-- This button will take the user to the top of the screen once user click on it -->
+    <!-- bootstrap nav code ends here -->
 
+    <!-- this button takes the user to the top of the screen once user clicks on it -->
     <button
       id="backToTop"
       style="
@@ -87,9 +91,9 @@
     >
       Back to Top
     </button>
-    <!-- Below div contains a button that will open up the form when the user 
-     click on it. The Javascript to help achieve this functionality is written at the end of this file -->
 
+    <!-- below div contains a big button that opens up the form when the user 
+     click on it. the Javascript to help achieve this functionality is written at the end of this file -->
     <div style="display: flex; justify-content: center">
       <button
         class="btn btn-primary"
@@ -98,6 +102,7 @@
           display: block;
           /* margin-left: 600px; */
           margin-top: 50px;
+          margin-bottom: 50px;
           width: 2000px;
           padding: 150px;
         "
@@ -133,21 +138,12 @@
         </div>
       </button>
     </div>
-    <!-- below form will be displayed on "Get in touch." button above and will be hidden when user click on  cancel icon in the form-->
+
+    <!-- below form will be displayed when clicked on "Get in touch." button and 
+     will be hidden when user clicks on cancel icon at the top right of the form-->
     <div class="form-container" id="form-container" style="display: none">
       <form action="" method="">
         <div style="display: flex; justify-content: space-between">
-          <!-- <h2
-            style="
-              display: flex;
-              align-items: center;
-              text-align: center;
-              justify-content: center;
-              justify-items: center;
-            "
-          >
-            Get in touch :)
-          </h2> -->
           <button
             id="cancelbtn"
             style="
@@ -220,83 +216,8 @@
         ></div>
       </div>
     </div>
-    <!-- below will will create cards for social media platform of mine -->
-    <div
-      style="
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-top: 50px;
-      "
-    >
-      <!-- Facebook Card -->
-      <div
-        class="card"
-        style="background: linear-gradient(to right, #ffffff, #1877f2)"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="50"
-          height="50"
-          fill="currentColor"
-          class="bi bi-facebook"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M5 2.5v2.25H3v3h2V16h3.5V7.75H11l.5-3H8.5V2.5c0-.83.17-1.25 1.25-1.25H11V0h-1.75C6.94 0 6 1.17 6 3.25V5.5H5V2.5z"
-          />
-        </svg>
-        <h3>Facebook</h3>
-        <a href="https://www.facebook.com" target="_blank">Visit my Facebook</a>
-      </div>
 
-      <!-- WhatsApp Card -->
-      <div
-        class="card"
-        style="background: linear-gradient(to right, #ffffff, #72de58)"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="50"
-          height="50"
-          fill="currentColor"
-          class="bi bi-whatsapp"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M13.6 2.4C12.1.9 10.1 0 8 0 3.58 0 0 3.58 0 8c0 1.41.37 2.73 1.03 3.89L0 16l4.27-1.04C5.25 15.63 6.6 16 8 16c4.42 0 8-3.58 8-8 0-2.1-.82-4.1-2.4-5.6zm-5.6 13.2c-1.28 0-2.52-.33-3.64-.96l-.26-.15-2.68.66.71-2.55-.16-.27C1.28 11.1.93 9.57.93 8c0-3.9 3.17-7.07 7.07-7.07 1.89 0 3.67.74 5.01 2.08A7.04 7.04 0 0 1 15.07 8c0 3.9-3.17 7.07-7.07 7.07zm3.83-4.98c-.2-.1-1.18-.58-1.37-.64-.18-.06-.31-.1-.43.1-.12.19-.5.64-.62.77-.12.12-.23.14-.43.05-.2-.1-.84-.31-1.6-1-.59-.52-.99-1.16-1.11-1.36-.12-.19-.01-.29.09-.38.1-.1.2-.23.3-.35.1-.12.13-.19.2-.31.07-.12.03-.23-.02-.32-.05-.1-.43-1.02-.59-1.4-.16-.39-.32-.33-.43-.34h-.37c-.12 0-.3.04-.46.22-.16.19-.61.59-.61 1.44 0 .85.63 1.68.72 1.8.09.12 1.22 1.86 3.01 2.61.42.18.75.29 1.01.37.42.13.8.11 1.1.07.34-.05 1.06-.43 1.21-.84.15-.41.15-.77.11-.84-.05-.07-.19-.12-.39-.22z"
-          />
-        </svg>
-        <h3>WhatsApp</h3>
-        <a href="https://wa.me/+923325228522" target="_blank"
-          >Chat on WhatsApp</a
-        >
-      </div>
-
-      <!-- LinkedIn Card -->
-      <div
-        class="card"
-        style="background: linear-gradient(to right, #ffffff, #0077b5)"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="50"
-          height="50"
-          fill="currentColor"
-          class="bi bi-linkedin"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.473 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.527 16 0 15.487 0 14.854V1.146zM4.943 12.59V5.937H2.542v6.654h2.4zm-1.2-7.59c.837 0 1.35-.55 1.35-1.24-.016-.703-.513-1.24-1.335-1.24-.822 0-1.35.537-1.35 1.24 0 .69.513 1.24 1.313 1.24h.022zm4.908 7.59V9.359c0-.162.012-.324.06-.439.134-.324.439-.659.952-.659.67 0 .938.497.938 1.224v3.104h2.4V9.264c0-2.22-1.185-3.252-2.763-3.252-1.278 0-1.84.7-2.153 1.19v.023h-.016a2.478 2.478 0 0 1 .015-.023V5.937h-2.4c.03.663 0 6.654 0 6.654h2.4z"
-          />
-        </svg>
-        <h3>LinkedIn</h3>
-        <a href="https://www.linkedin.com/in/abeeramir001" target="_blank"
-          >Connect on LinkedIn</a
-        >
-      </div>
-    </div>
+    <!--  below is the footer for my webpage -->
     <footer class="footer text-center">
       <div class="container">
         <div class="d-flex justify-content-center align-items-center">
@@ -324,10 +245,39 @@
               />
             </svg>
           </a>
+          <a href="https://wa.me/+923325228522" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-whatsapp"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+              />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/abeeramir001/" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-linkedin"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+              />
+            </svg>
+          </a>
         </div>
-        <p class="mt-3">&copy; 2024 Abeerion</p>
+        <p class="mt-3">&copy; 2024 Abeer Amir</p>
       </div>
     </footer>
+
     <script>
       // below JS will make the form appear or dissppear when user clicks on the buttons
       let close = false;
@@ -346,12 +296,14 @@
         close = false;
       });
     </script>
-    <script>
-      // Below Javascript is responsible for handling the backend functionality of the back to
-      // top button that will take the user back to the top screen. Also when it reached a certain point (<=20), it will hide the button from then user
 
-      const backToTopButton = document.getElementById("backToTop");
-      // This will show or hide the button based on scroll position
+    <script>
+      // below Javascript is responsible for handling the backend functionality of the back to
+      // top button that will take the user back to the top screen. Also when it reaches a 
+      // certain point (<=20), it will hide the button from then user
+    const backToTopButton = document.getElementById("backToTop");
+      
+    // this will show or hide the button based on scroll position
       window.onscroll = function () {
         if (
           document.body.scrollTop > 17 ||
@@ -362,7 +314,7 @@
           backToTopButton.style.display = "none";
         }
       };
-      // This will scroll to top when button is clicked
+      // this will scroll to top when button is clicked
       backToTopButton.onclick = function () {
         window.scrollTo({
           top: 0,
@@ -371,7 +323,7 @@
       };
     </script>
     <script>
-      // below code will appear a cicle spinner that would make it look like loading bar
+      // below code will make a cicle spinner appear that would make it look like loading bar
       document
         .getElementById("form-container")
         .addEventListener("submit", function (event) {
@@ -379,8 +331,8 @@
           setTimeout(function () {}, 1000);
         });
     </script>
+    
     <!-- below cdn link are copied from bootstrap's installation section to support navbar's mobile responsive design  -->
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
